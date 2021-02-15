@@ -21,6 +21,8 @@ namespace ProjetoVCardMVC.Models
             NomeContato = nomeContato;
             Login = login;
             Senha = senha;
+
+
         }
 
         public Empresa()

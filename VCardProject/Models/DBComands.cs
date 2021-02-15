@@ -13,6 +13,7 @@ namespace ProjetoVCardMVC.Models
         /// <summary>
         /// Funcao Builder para conection string
         /// </summary>
+        
         static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder()
         {
             DataSource = "testeandre.database.windows.net",
@@ -319,7 +320,13 @@ namespace ProjetoVCardMVC.Models
             return temp;
         }
 
-
+        /// <summary>
+        ///  Esta funcao retorna uma lista com os dados preenchidos do ultimo cliente quando ele clicar em voltar 
+        /// para alterar algumma informacao... Apos executar essa funcao, retornar os valores, entao o cliente podera
+        /// alterar e entao enivar uma novo funcao para alterar, chanada de UpdateOpcaoVoltarInsertClientePJ
+        /// </summary>
+        /// <param name="listaPj"></param>
+        /// <returns></returns>
         public static bool OpcaoVoltarInsertClientePJ(out List<Pj> listaPj)
         {
             //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
@@ -850,4 +857,10 @@ namespace ProjetoVCardMVC.Models
             //DBCC CHECKIDENT( '[dbo].[pessoa]', RESEED, 0 )
         }
     }
+
+
+
+
+
+
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoVCardMVC.Models
 {
-    public class Empresa
+    public class Empresa : Endereco, IEmpresa
     {
         public Empresa(int idEmpresa, string nomeRazaoSocial, string nomeFantasia, string cNPJ, string dataFundacao, string email, string ramosAtividades, string fone1, string fone2, string nomeContato, string login, string senha)
         {

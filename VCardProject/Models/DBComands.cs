@@ -247,6 +247,22 @@ namespace ProjetoVCardMVC.Models
             return temp;
         }
 
+        /// <summary>
+        /// Funcao a ser executada quando o cliente alterar as informacoes apos clicar em voltar na tela de registro
+        /// do VCard 
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="email"></param>
+        /// <param name="cpf"></param>
+        /// <param name="dataNasc"></param>
+        /// <param name="fone"></param>
+        /// <param name="cep"></param>
+        /// <param name="cidade"></param>
+        /// <param name="rua"></param>
+        /// <param name="bairro"></param>
+        /// <param name="tempoExp"></param>
+        /// <param name="ramo"></param>
+        /// <returns></returns>
         public static bool UpdateOpcaoVoltarInsertClientePF(string nome, string email, string cpf, string dataNasc, string fone, string cep, string cidade, string rua, string bairro, string tempoExp, string ramo)
         {
             int status = 1;
@@ -320,6 +336,13 @@ namespace ProjetoVCardMVC.Models
         }
 
 
+        /// <summary>
+        ///   /// Esta funcao retorna uma lista com os dados preenchidos do ultimo cliente quando ele clicar em voltar 
+        /// para alterar algumma informacao... Apos executar essa funcao, retornar os valores, entao o cliente podera
+        /// alterar e entao enivar uma novo funcao para alterar, chanada de UpdateOpcaoVoltarInsertClientePJ
+        /// </summary>
+        /// <param name="listaPj"></param>
+        /// <returns></returns>
         public static bool OpcaoVoltarInsertClientePJ(out List<Pj> listaPj)
         {
             //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
@@ -458,7 +481,22 @@ namespace ProjetoVCardMVC.Models
         }
 
 
-
+        /// <summary>
+        /// /// Funcao a ser executada quando o cliente alterar as informacoes apos clicar em voltar na tela de registro
+        /// do VCard 
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="email"></param>
+        /// <param name="cnpj"></param>
+        /// <param name="dataFund"></param>
+        /// <param name="fone"></param>
+        /// <param name="cep"></param>
+        /// <param name="cidade"></param>
+        /// <param name="rua"></param>
+        /// <param name="bairro"></param>
+        /// <param name="tempoExp"></param>
+        /// <param name="ramo"></param>
+        /// <returns></returns>
         public static bool UpdateOpcaoVoltarInsertClientePJ(string nome, string email, string cnpj, string dataFund, string fone, string cep, string cidade, string rua, string bairro, string tempoExp, string ramo)
         {
             int status = 1;

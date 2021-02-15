@@ -123,7 +123,7 @@ namespace ProjetoVCardMVC.Models
             //string select = $"Select a.*, b.* FROM dbo.pessoa a, dbo.endereco b WHERE  a.RamoAtiv1 = '{ramoativ}' ORDER BY nome DESC";
             try
             {
-                string select = $"Select (top 1) * FROM dbo.pessoa ORDER BY nome DESC";
+                string select = $"Select (top 1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
                 cmd = new SqlCommand(select, conn);
                 conn.Open();
                 dr = cmd.ExecuteReader();
@@ -165,7 +165,7 @@ namespace ProjetoVCardMVC.Models
                             temp = false;
                             try
                             {
-                                select = "Select Top(1) * FROM dbo.pf ORDER BY idtable1 DESC";
+                                select = "Select Top(1) * FROM dbo.pf ORDER BY idpf DESC";
                                 cmd = new SqlCommand(select, conn);
                                 conn.Open();
                                 dr = cmd.ExecuteReader();
@@ -259,7 +259,7 @@ namespace ProjetoVCardMVC.Models
             try
             {
                 temp = false;
-                select = "Select Top(1) * FROM dbo.pf ORDER BY idtable1 DESC";
+                select = "Select Top(1) * FROM dbo.pf ORDER BY idpf DESC";
                 cmd = new SqlCommand(select, conn);
                 conn.Open();
                 dr = cmd.ExecuteReader();
@@ -272,7 +272,7 @@ namespace ProjetoVCardMVC.Models
                 dr.Close();
                 conn.Close();
                 temp = true;
-                
+
                 if (temp)
                 {
                     temp = false;
@@ -318,6 +318,219 @@ namespace ProjetoVCardMVC.Models
 
             return temp;
         }
+
+
+        public static bool OpcaoVoltarInsertClientePJ(out List<Pj> listaPj)
+        {
+            //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
+            //listapessoa = new List<Pessoa>();
+            bool temp = false;
+            listaPj = new List<Pj>();
+            //Pessoa pessoa = new Pessoa();
+            Pj pessoaJuridica = new Pj();
+            string nome, email, cnpj, dataFund, fone, cep, cidade, rua, bairro, tempoExp, ramo;
+            //string select = $"Select Top(1) a.*, b.*, c.* FROM dbo.pessoa a, dbo.endereco b, dbo.pf c ORDER BY idtable1 DESC";
+            //string select = $"Select a.*, b.* FROM dbo.pessoa a, dbo.endereco b WHERE  a.RamoAtiv1 = '{ramoativ}' ORDER BY nome DESC";
+            try
+            {
+                string select = $"Select (top 1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    pessoaJuridica.Nome = Convert.ToString(dr["nome"]);
+                    pessoaJuridica.Email = Convert.ToString(dr["Email"]);
+                    pessoaJuridica.Fone = Convert.ToString(dr["Fone"]);
+                    pessoaJuridica.TempoExperiencia = Convert.ToInt32(dr["TempoExperiencia"]);
+                    pessoaJuridica.RamoAtividade1 = Convert.ToString(dr["RamoAtiv1"]);
+                }
+                dr.Close();
+                conn.Close();
+                temp = true;
+
+                if (temp)
+                {
+                    temp = false;
+                    try
+                    {
+                        select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
+                        cmd = new SqlCommand(select, conn);
+                        conn.Open();
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            // idEnd = Convert.ToInt32(dr["idend"]);
+
+                            pessoaJuridica.Cep = Convert.ToString(dr["Cep"]);
+                            pessoaJuridica.Cidade = Convert.ToString(dr["Cidade"]);
+                            pessoaJuridica.Logradouro = Convert.ToString(dr["Rua"]);
+                            pessoaJuridica.Bairro = Convert.ToString(dr["Bairro"]);
+                        }
+                        dr.Close();
+                        conn.Close();
+                        temp = true;
+                        if (temp)
+                        {
+                            temp = false;
+                            try
+                            {
+                                select = "Select Top(1) * FROM dbo.pj ORDER BY idpj DESC";
+                                cmd = new SqlCommand(select, conn);
+                                conn.Open();
+                                dr = cmd.ExecuteReader();
+                                while (dr.Read())
+                                {
+                                    // idPessoa = Convert.ToInt32(dr["idtable1"]);
+                                    pessoaJuridica.DataFund = Convert.ToString(dr["DataFund"]);
+                                    pessoaJuridica.CNPJ = Convert.ToString(dr["CNPJ"]);
+                                }
+                                dr.Close();
+                                conn.Close();
+                                temp = true;
+                            }
+                            catch (FormatException)
+                            {
+                                temp = false;
+                            }
+                            catch (SqlException)
+                            {
+                                Console.WriteLine("BD Error... Press enter to continue     ");
+                                Console.ReadLine();
+                                Console.Clear();
+                                temp = false;
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                                Console.ReadLine();
+                                Console.Clear();
+                                temp = false;
+                            }
+                        }
+                    }
+                    catch (FormatException)
+                    {
+                        temp = false;
+                    }
+                    catch (SqlException)
+                    {
+                        Console.WriteLine("BD Error... Press enter to continue     ");
+                        Console.ReadLine();
+                        Console.Clear();
+                        temp = false;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                        Console.ReadLine();
+                        Console.Clear();
+                        temp = false;
+                    }
+
+                }
+            }
+            catch (FormatException)
+            {
+                temp = false;
+            }
+            catch (SqlException)
+            {
+                Console.WriteLine("BD Error... Press enter to continue     ");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+
+            if (temp)
+            {
+                listaPj.Add(pessoaJuridica);
+            }
+
+            return temp;
+        }
+
+
+
+        public static bool UpdateOpcaoVoltarInsertClientePJ(string nome, string email, string cnpj, string dataFund, string fone, string cep, string cidade, string rua, string bairro, string tempoExp, string ramo)
+        {
+            int status = 1;
+            bool temp = false;
+            int idJuridica = 0;
+            int IdPessoa = 0;
+            int idEndereco = 0;
+            //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
+            string select = "";
+            try
+            {
+                temp = false;
+                select = "Select Top(1) * FROM dbo.pj ORDER BY idpj DESC";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    idJuridica = Convert.ToInt32(dr["idpj"]);
+                    IdPessoa = Convert.ToInt32(dr["pessoa_idtable1"]);
+                    idEndereco = Convert.ToInt32(dr["end_idend"]);
+                }
+                dr.Close();
+                conn.Close();
+                temp = true;
+
+                if (temp)
+                {
+                    temp = false;
+                    string update = $"Update dbo.endereco Set Cep = '{cep}', Cidade = '{cidade}', Rua = '{rua}', Bairro = '{bairro}'  WHERE  idend = {idEndereco}";
+                    cmd = new SqlCommand(update, conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    update = $"Update dbo.pj Set CNPJ = '{cnpj}', DataFund = '{dataFund}' WHERE  idpj = {idJuridica}";
+                    cmd = new SqlCommand(update, conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    update = $"Update dbo.pessoa Set nome = '{nome}', Email = '{email}', RamoAtiv1 = '{ramo}', Fone = '{fone}', TempoExperiencia = '{tempoExp}'  WHERE  idtable1 = {IdPessoa}";
+                    cmd = new SqlCommand(update, conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    temp = true;
+                }
+            }
+            catch (FormatException)
+            {
+                temp = false;
+            }
+            catch (SqlException)
+            {
+                Console.WriteLine("BD Error... Press enter to continue     ");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+
+
+            return temp;
+        }
+
 
         /// <summary>
         /// Esta funcao faz o Insert do Cliente PJ no BD apos o cadastro inicial... 
@@ -625,5 +838,16 @@ namespace ProjetoVCardMVC.Models
             return temp;
         }
 
+        public static void SintaxParaZerarTabelasAzure()
+        {
+            //truncate table dbo.pj
+            //truncate table dbo.pf
+            //Delete From dbo.endereco
+            //Delete From dbo.Empresa
+            //Delete From dbo.pessoa
+            //DBCC CHECKIDENT('[dbo].[endereco]', RESEED, 0)
+            //DBCC CHECKIDENT( '[dbo].[Empresa]', RESEED, 0 )
+            //DBCC CHECKIDENT( '[dbo].[pessoa]', RESEED, 0 )
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace ProjetoVCardMVC.Models
     {
         int idpj { get; set; }
         string CNPJ { get; set; }
+        string DataFund { get; set; }
 
         int idEnd { get; set; }
 

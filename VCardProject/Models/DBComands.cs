@@ -763,8 +763,6 @@ namespace ProjetoVCardMVC.Models
             dr.Close();
             conn.Close();
 
-
-
             return true;
         }
 

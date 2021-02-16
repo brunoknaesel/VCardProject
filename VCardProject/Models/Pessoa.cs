@@ -9,12 +9,12 @@ namespace ProjetoVCardMVC.Models
     {
 
         //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
-        public Pessoa(int id, string nome, string email, string ramoAtividade1, 
-            string ramoAtividade2, string ramoAtividade3, string fone, string fone2, 
-            string redesSociais, int tempoExperiencia, int status, int idEnd, string logradouro, 
-            string numero, string bairro, string cep, string cidade, string estado, string pais, 
-            string complemento) : 
-            base (idEnd, logradouro, numero, bairro, cep, cidade, estado, pais, complemento)
+        public Pessoa(int id, string nome, string email, string ramoAtividade1,
+            string ramoAtividade2, string ramoAtividade3, string fone, string fone2,
+            string redesSociais, int tempoExperiencia, int status, int idEnd, string logradouro,
+            string numero, string bairro, string cep, string cidade, string estado, string pais,
+            string complemento) :
+            base(idEnd, logradouro, numero, bairro, cep, cidade, estado, pais, complemento)
         {
             Id = id;
             Nome = nome;
@@ -28,12 +28,11 @@ namespace ProjetoVCardMVC.Models
             TempoExperiencia = tempoExperiencia;
             Status = status;
             Bairro = bairro;
-
         }
 
         public Pessoa()
         {
-         
+
         }
 
         public int Id { get; set; }

@@ -56,51 +56,76 @@ namespace ProjetoVCardMVC.Models
             tempoExp = "9";
             ramo = "Pintor";
 
+            bool temp = false;
 
-            string insert = $"Insert into dbo.endereco (Cep, Cidade, Rua, Bairro) values ('{cep}','{cidade}','{rua}','{bairro}')";
-            cmd = new SqlCommand(insert, conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-
-            insert = $"Insert into dbo.pessoa (Nome, Email, Fone, TempoExperiencia, RamoAtiv1, Status) values ('{nome}','{email}','{fone}','{Convert.ToInt32(tempoExp)}', '{ramo}', {status} )";
-            cmd = new SqlCommand(insert, conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-
-            int idEnd = 0;
-            int idPessoa = 0;
-
-            string select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
-            cmd = new SqlCommand(select, conn);
-            conn.Open();
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                idEnd = Convert.ToInt32(dr["idend"]);
-            }
-            dr.Close();
-            conn.Close();
+                string insert = $"Insert into dbo.endereco (Cep, Cidade, Rua, Bairro) values ('{cep}','{cidade}','{rua}','{bairro}')";
+                cmd = new SqlCommand(insert, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
 
-            select = "Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
-            cmd = new SqlCommand(select, conn);
-            conn.Open();
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+                insert = $"Insert into dbo.pessoa (Nome, Email, Fone, TempoExperiencia, RamoAtiv1, Status) values ('{nome}','{email}','{fone}','{Convert.ToInt32(tempoExp)}', '{ramo}', {status} )";
+                cmd = new SqlCommand(insert, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                int idEnd = 0;
+                int idPessoa = 0;
+
+                string select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    idEnd = Convert.ToInt32(dr["idend"]);
+                }
+                dr.Close();
+                conn.Close();
+
+                select = "Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    idPessoa = Convert.ToInt32(dr["idtable1"]);
+                }
+                dr.Close();
+                conn.Close();
+
+                insert = $"Insert into dbo.pf (CPF, Nascimento, end_idend, pessoa_idtable1) values ('{cpf}','{dataNasc}',{idEnd}, {idPessoa} )";
+                cmd = new SqlCommand(insert, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                temp = true;
+            }
+            catch (FormatException)
             {
-                idPessoa = Convert.ToInt32(dr["idtable1"]);
+                temp = false;
             }
-            dr.Close();
-            conn.Close();
+            catch (SqlException)
+            {
+                Console.WriteLine("BD Error... Press enter to continue     ");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+          
 
-            insert = $"Insert into dbo.pf (CPF, Nascimento, end_idend, pessoa_idtable1) values ('{cpf}','{dataNasc}',{idEnd}, {idPessoa} )";
-            cmd = new SqlCommand(insert, conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-
-            return true;
+            return temp;
         }
 
         /// <summary>
@@ -605,50 +630,75 @@ namespace ProjetoVCardMVC.Models
             tempoExp = "8";
             ramo = "Pintor";
 
-            string insert = $"Insert into dbo.endereco (Cep, Cidade, Rua, Bairro) values ('{cep}','{cidade}','{rua}','{bairro}')";
-            cmd = new SqlCommand(insert, conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            bool temp = false;
 
-            insert = $"Insert into dbo.pessoa (Nome, Email, Fone, TempoExperiencia, RamoAtiv1, Status) values ('{nome}','{email}','{fone}','{Convert.ToInt32(tempoExp)}', '{ramo}', {status} )";
-            cmd = new SqlCommand(insert, conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-
-            int idEnd = 0;
-            int idPessoa = 0;
-
-            string select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
-            cmd = new SqlCommand(select, conn);
-            conn.Open();
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                idEnd = Convert.ToInt32(dr["idend"]);
-            }
-            dr.Close();
-            conn.Close();
+                string insert = $"Insert into dbo.endereco (Cep, Cidade, Rua, Bairro) values ('{cep}','{cidade}','{rua}','{bairro}')";
+                cmd = new SqlCommand(insert, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
 
-            select = "Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
-            cmd = new SqlCommand(select, conn);
-            conn.Open();
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+                insert = $"Insert into dbo.pessoa (Nome, Email, Fone, TempoExperiencia, RamoAtiv1, Status) values ('{nome}','{email}','{fone}','{Convert.ToInt32(tempoExp)}', '{ramo}', {status} )";
+                cmd = new SqlCommand(insert, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                int idEnd = 0;
+                int idPessoa = 0;
+
+                string select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    idEnd = Convert.ToInt32(dr["idend"]);
+                }
+                dr.Close();
+                conn.Close();
+
+                select = "Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    idPessoa = Convert.ToInt32(dr["idtable1"]);
+                }
+                dr.Close();
+                conn.Close();
+
+                insert = $"Insert into dbo.pj (CNPJ, DataFund, end_idend, pessoa_idtable1) values ('{cnpj}','{dataFund}',{idEnd}, {idPessoa} )";
+                cmd = new SqlCommand(insert, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                temp = true;
+            }
+            catch (FormatException)
             {
-                idPessoa = Convert.ToInt32(dr["idtable1"]);
+                temp = false;
             }
-            dr.Close();
-            conn.Close();
+            catch (SqlException)
+            {
+                Console.WriteLine("BD Error... Press enter to continue     ");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
 
-            insert = $"Insert into dbo.pj (CNPJ, DataFund, end_idend, pessoa_idtable1) values ('{cnpj}','{dataFund}',{idEnd}, {idPessoa} )";
-            cmd = new SqlCommand(insert, conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-
-            return true;
+            return temp;
         }
 
         /// <summary>
@@ -740,31 +790,72 @@ namespace ProjetoVCardMVC.Models
         /// </summary>
         /// <param name="listapessoa"></param>
         /// <returns></returns>
-        public static bool PreviwaVCard(out List<Pessoa> listapessoa)
+        public static bool PreviewVCard(out List<Pessoa> listapessoa)
         {
             bool temp = false;
             listapessoa = new List<Pessoa>();
-
             try
             {
-                string select = $"Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
+                Pessoa pessoa = new Pessoa();
+
+                string select = $"Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
                 cmd = new SqlCommand(select, conn);
                 conn.Open();
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    Pessoa pessoa = new Pessoa();
-                    pessoa.Nome = Convert.ToString(dr["nome"]);
-                    pessoa.Fone = Convert.ToString(dr["Fone"]);
-                    pessoa.TempoExperiencia = Convert.ToInt32(dr["TempoExperiencia"]);
-                    //pessoa.Bairro = Convert.ToString(dr["Bairro"]);
-                    listapessoa.Add(pessoa);
+                    pessoa.Bairro = Convert.ToString(dr["Bairro"]);
+                    pessoa.Logradouro = Convert.ToString(dr["Rua"]);
+                    pessoa.Cidade = Convert.ToString(dr["Cidade"]);
+                    pessoa.Cep = Convert.ToString(dr["Cep"]);
+                    pessoa.Numero = Convert.ToString(dr["NumeroRua"]);
+                    pessoa.Complemento = Convert.ToString(dr["ComplementoRua"]);
                 }
                 dr.Close();
                 conn.Close();
-                
-                
                 temp = true;
+
+                if (temp)
+                {
+                    temp = false;
+                    try
+                    {
+                        select = $"Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
+                        cmd = new SqlCommand(select, conn);
+                        conn.Open();
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            pessoa.Nome = Convert.ToString(dr["nome"]);
+                            pessoa.Fone = Convert.ToString(dr["Fone"]);
+                            pessoa.TempoExperiencia = Convert.ToInt32(dr["TempoExperiencia"]);
+                            pessoa.RamoAtividade1 = Convert.ToString(dr["RamoAtiv1"]);
+                            listapessoa.Add(pessoa);
+                        }
+                        dr.Close();
+                        conn.Close();
+                        
+                        temp = true;
+                    }
+                    catch (FormatException)
+                    {
+                        temp = false;
+                    }
+                    catch (SqlException)
+                    {
+                        Console.WriteLine("BD Error... Press enter to continue     ");
+                        Console.ReadLine();
+                        Console.Clear();
+                        temp = false;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                        Console.ReadLine();
+                        Console.Clear();
+                        temp = false;
+                    }
+                }
             }
             catch (FormatException)
             {
@@ -938,6 +1029,9 @@ namespace ProjetoVCardMVC.Models
             return temp;
         }
 
+        /// <summary>
+        /// funcao apenas para usar no azure quando quiseremos zerar as tabelas
+        /// </summary>
         public static void SintaxParaZerarTabelasAzure()
         {
             //truncate table dbo.pj
@@ -953,7 +1047,6 @@ namespace ProjetoVCardMVC.Models
             //update para usar no azure caso precisarmos update inf direto no banco
             //string update = $"Update dbo.Empresa Set Senha = '{senha}' Where Id = {idEmpresa}";
         }
-
 
 
         public static bool ViewScreenAdm(string login, out List<Empresa> listaempresa)
@@ -996,6 +1089,7 @@ namespace ProjetoVCardMVC.Models
                 conn.Close();
                 temp = true;
 
+                //(NomeEmpresa, NomeFantasia, CNPJ, DataFundacao, email, Fone1, ContatoNome, Login, Senha, cep, cidade, rua, numeroRua, complRua, bairro)
 
             }
             catch (FormatException)
@@ -1213,6 +1307,50 @@ namespace ProjetoVCardMVC.Models
                 Console.Clear();
                 temp = false;
             }
+
+            return temp;
+        }
+
+        /// <summary>
+        /// Executar esta função apenas para inserir uma empresa no BD.. 
+        /// </summary>
+        /// <returns></returns>
+        public static bool InserirPrimeiraEmpresa()
+        {
+            bool temp = false;
+
+            try
+            {
+                string insert = $"Insert into dbo.Empresa (NomeEmpresa, NomeFantasia, CNPJ, DataFundacao, email, Fone1, ContatoNome, Login, Senha, cep, cidade, rua, numeroRua, complRua, bairro) values ('Cia Teste S/A', 'Cia Teste', '00.123.123/0001-01', '01/01/2001', 'adm@ciateste.com.br', '(47) 3330-0001', 'José de Oliveira', 'ciateste', 'teste123', '89046-000', 'Blumenau', 'Rua XV de Novembro', '1520', 'Edifício Brasília', 'Centro')";
+                cmd = new SqlCommand(insert, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                temp = true;
+
+
+            }
+            catch (FormatException)
+            {
+                temp = false;
+            }
+            catch (SqlException)
+            {
+                Console.WriteLine("BD Error... Press enter to continue     ");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                Console.ReadLine();
+                Console.Clear();
+                temp = false;
+            }
+
+
 
             return temp;
         }

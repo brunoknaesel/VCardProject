@@ -25,8 +25,8 @@ namespace ProjetoVCardMVC.Controllers
               //DBComands.TesteUpdate();
               //DBComands.InsertClientePF("", "", "", "", "", "", "", "", "", "", "");
               //DBComands.InsertClientePJ("", "", "", "", "", "", "", "", "", "", "");
-              //DBComands.InsertPFManualmente();
-              //DBComands.InsertPJManualmente();
+              DBComands.InsertPFManualmente();
+              DBComands.InsertPJManualmente();
 
                 List<Pessoa> listapessoa = new List<Pessoa>();
                 bool teste1 = DBComands.SelectClienteView("Pintor", out listapessoa);

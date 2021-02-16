@@ -23,12 +23,15 @@ namespace ProjetoVCardMVC.Controllers
         {
             { ////executar comandos para teste aqui
               //DBComands.TesteUpdate();
-                DBComands.InsertClientePF("", "", "", "", "", "", "", "", "", "", "");
-                DBComands.InsertClientePJ("", "", "", "", "", "", "", "", "", "", "");
+              //DBComands.InsertClientePF("", "", "", "", "", "", "", "", "", "", "");
+              //DBComands.InsertClientePJ("", "", "", "", "", "", "", "", "", "", "");
+              //DBComands.InsertPFManualmente();
+              //DBComands.InsertPJManualmente();
+
                 List<Pessoa> listapessoa = new List<Pessoa>();
-                bool teste1 = DBComands.SelectClienteView("Eletricista", out listapessoa);
+                bool teste1 = DBComands.SelectClienteView("Pintor", out listapessoa);
                 ViewBag.SelectCliente = listapessoa;
-                bool teste2 = DBComands.PreviwaVCard(out listapessoa);
+                bool teste2 = DBComands.PreviewVCard(out listapessoa);
                 ViewBag.Preview = listapessoa;
                 bool teste3 = DBComands.SelectClientesPendentes(out listapessoa);
                 ViewBag.SelectClientesPendentes = listapessoa;

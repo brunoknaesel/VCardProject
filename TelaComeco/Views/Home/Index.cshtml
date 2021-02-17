@@ -22,25 +22,16 @@
         <div class="text-center">
             <h2>V-Card.</h2>
         </div>
-        <form action="" method="get" class="formulario-form">
+        @{string vaiPara = ""; }
+        <form action=@vaiPara method="get" class="formulario-form">
 
             <div class="input-field">
                 <label> Você é Administrador ou Visitante? </label>
-                <div>
-                    <label>
-                        <br />
-                        <input type="radio" name="adm" value="Administrador" checked />
-                        Administador.
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input type="radio" name="visit" value="Visitante" />
-                        Visitante.
-                    </label>
-                </div>
             </div>
-            <input type="submit" value="Continue"> <br />
+            <input type="submit" value="Continue"> 
+            <input type="submit" value="Bora"> <br />
+                
+
 
         </form>
     </main>

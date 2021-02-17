@@ -1,28 +1,48 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "V-Card";
     List<Pessoa> listapessoa1 = ViewBag.Preview;
     List<Pessoa> listapessoa = ViewBag.SelectCliente;
     List<Pessoa> listapessoa2 = ViewBag.SelectClientesPendentes;
 }
 
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <title></title>
+    <link href="~/css/Indexo.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <main class="container">
+
+        <div class="text-center">
+            <h2>V-Card.</h2>
+        </div>
+        @{string vaiPara = ""; }
+        <form action=@vaiPara method="get" class="formulario-form">
+
+            <div class="input-field">
+                <label> Você é Administrador ou Visitante? </label>
+            </div>
+            <input type="submit" value="Administrador" formaction="/Home/Adm">
+            <input type="submit" value="Visitante" formaction="/Home/Visit"> <br />
 
 
-value="nome | Idade | 5421241 | "
 
-@{
-    string a = "nome";
-    <input type="button" name="name" value="a" />
-
-
-
-}
+        </form>
+    </main>
+</body>
+</html>
 
 
 <div>
+
+
     @*<div class="text-center">
             <h1 class="display-4">Welcome</h1>
             <p>Ta difirci esse negocio <a href=".... eita vida..."></a>.</p>
         </div>
+
 
         <div class="text-center">
             <h1 class="display-4">Lista do Profissional solicitado: </h1>
@@ -32,9 +52,12 @@ value="nome | Idade | 5421241 | "
                     <li>Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... Ramo Ativ: @item.RamoAtividade1 ... Bairro: @item.Bairro.</li>
                 }
             </ul>
-        </div>
+        </div>*@
 
-        <div class="text-center">
+
+
+
+    @*<div class="text-center">
             <h1 class="display-4">Lista ultimo cadastrado</h1>
             <ul>
                 @foreach (var item in listapessoa1) // funcao para testar na tela
@@ -43,6 +66,10 @@ value="nome | Idade | 5421241 | "
                 }
             </ul>
         </div>
+
+
+
+
 
         <div class="text-center">
             <h1 class="display-4">Lista de todos os cadastrados pendentes</h1>

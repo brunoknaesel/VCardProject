@@ -1,0 +1,136 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #5514F5,#1377D4, #21EBA7);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    background: white;
+    max-width: 950px;
+    min-height: 4vh;
+    padding: 3rem;
+    box-shadow: 5px 5px 15px #5514f5;
+    border-radius: 8px;
+}
+
+main h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #5514F5,#1377D4, #21EBA7);
+    transform: scaleX(0);
+    transition: all 1.0s cubic-bezier(0.46, 0.07, 1, 1);
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+    .input-field input:focus:hover {
+        padding-left: 5px;
+        padding-bottom: 5px;
+        color: #000000;
+        transition: all .5s;
+    }
+
+    .input-field input:hover {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left, #5514F5,#1377D4, #21EBA7);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.8s ease;
+}
+
+    form input[type="submit"]:hover {
+        transition: all 1.5s;
+        letter-spacing: 5.0px;
+        background: linear-gradient(to left,#21EBA7,#1377D4,#5514F5);
+    }
+
+/*------------------------------------------------------------------
+[ Button Logout ]*/
+
+input[type="button" i] {
+    background: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: purple;
+    transition: all 0.8s;
+    font-size: 1.0rem;
+}
+
+    input[type="button" i]:hover {
+        transition: all 0.8s;
+        color: #21EBA7;
+        background: white;
+    }
+
+.dados {
+    color: #5514F5;
+    font-size:40px;
+}
+  .label{
+      font-size:30px;
+  }

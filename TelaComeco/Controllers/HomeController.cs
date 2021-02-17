@@ -28,6 +28,21 @@ namespace TelaComeco.Controllers
             return View();
         }
 
+        public IActionResult Vamo()
+        {
+            return View();
+        }
+
+        public IActionResult Bora()
+        {
+            return View();
+        }
+
+        public IActionResult Ala()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

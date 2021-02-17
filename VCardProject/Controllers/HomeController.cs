@@ -21,20 +21,20 @@ namespace ProjetoVCardMVC.Controllers
 
         public IActionResult Index()
         {
-            { ////executar comandos para teste aqui
-              //DBComands.TesteUpdate();
-                DBComands.InsertClientePF("", "", "", "", "", "", "", "", "", "", "");
-                DBComands.InsertClientePJ("", "", "", "", "", "", "", "", "", "", "");
-                List<Pessoa> listapessoa = new List<Pessoa>();
-                bool teste1 = DBComands.SelectClienteView("Eletricista", out listapessoa);
-                ViewBag.SelectCliente = listapessoa;
-                bool teste2 = DBComands.PreviwaVCard(out listapessoa);
-                ViewBag.Preview = listapessoa;
-                bool teste3 = DBComands.SelectClientesPendentes(out listapessoa);
-                ViewBag.SelectClientesPendentes = listapessoa;
-                bool teste4 = DBComands.UpdateClientesPendentes(49, 0);
+            //{ ////executar comandos para teste aqui
+            //  //DBComands.TesteUpdate();
+            //    DBComands.InsertClientePF("", "", "", "", "", "", "", "", "", "", "");
+            //    DBComands.InsertClientePJ("", "", "", "", "", "", "", "", "", "", "");
+            //    List<Pessoa> listapessoa = new List<Pessoa>();
+            //    bool teste1 = DBComands.SelectClienteView("Eletricista", out listapessoa);
+            //    ViewBag.SelectCliente = listapessoa;
+            //    bool teste2 = DBComands.PreviwaVCard(out listapessoa);
+            //    ViewBag.Preview = listapessoa;
+            //    bool teste3 = DBComands.SelectClientesPendentes(out listapessoa);
+            //    ViewBag.SelectClientesPendentes = listapessoa;
+            //    bool teste4 = DBComands.UpdateClientesPendentes(49, 0);
 
-            }
+            //}
 
 
 
@@ -47,6 +47,39 @@ namespace ProjetoVCardMVC.Controllers
             return View();
         }
 
+        //ADM TELAS ==================================================================
+        public IActionResult Adm()
+        {
+            return View();
+        }
+
+        //VISITANTE TELAS ==================================================================
+        public IActionResult Visit()
+        {
+            return View();
+        }
+        //TELAS RELACIONADAS A OPÇÃO DE CADASTRO==================================================
+        public IActionResult OpCad()
+        {
+            return View();
+        }
+        public IActionResult CadPj()
+        {
+            return View();
+        }
+        public IActionResult CadPf()
+        {
+            return View();
+        }
+        public IActionResult CadProf()
+        {
+            return View();
+        }
+        //TELAS RELACIONADAS A OPÇÃO DE SELECIONAR SERVIÇO==================================================
+        public IActionResult ChooseWork()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

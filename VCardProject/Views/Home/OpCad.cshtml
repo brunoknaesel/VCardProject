@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Cadastro.";
+}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="~/css/OpCadastro.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <main class="container">
+
+        <div class="text-center">
+            <h2>Cadastro.</h2>
+        </div>
+        <form action="" method="get" class="formulario-form">
+
+            <div class="input-field">
+                <label> Você é Pessoa Física ou Jurídica? </label>
+            </div>
+            <input type="submit" value="Pessoa Física" class="subs" formaction="/Home/CadPf">
+            <input type="submit" value="Pessoa Jurídica" class="subs" formaction="/Home/CadPj"> <br />
+
+            <div>
+                <input type="submit" class="volta" value="Voltar" formaction="/Home/Visit"/> <br />
+            </div>
+
+        </form>
+    </main>
+</body>
+</html>

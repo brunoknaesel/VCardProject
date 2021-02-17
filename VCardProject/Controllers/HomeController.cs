@@ -28,14 +28,14 @@ namespace ProjetoVCardMVC.Controllers
               //DBComands.InsertPFManualmente();
               //DBComands.InsertPJManualmente();
 
-                List<Pessoa> listapessoa = new List<Pessoa>();
-                bool teste1 = DBComands.SelectClienteView("Pintor", out listapessoa);
-                ViewBag.SelectCliente = listapessoa;
-                bool teste2 = DBComands.PreviewVCard(out listapessoa);
-                ViewBag.Preview = listapessoa;
-                bool teste3 = DBComands.SelectClientesPendentes(out listapessoa);
-                ViewBag.SelectClientesPendentes = listapessoa;
-                bool teste4 = DBComands.UpdateClientesPendentes(49, 0);
+                //List<Pessoa> listapessoa = new List<Pessoa>();
+                //bool teste1 = DBComands.SelectClienteView("Pintor", out listapessoa);
+                //ViewBag.SelectCliente = listapessoa;
+                //bool teste2 = DBComands.PreviewVCard(out listapessoa);
+                //ViewBag.Preview = listapessoa;
+                //bool teste3 = DBComands.SelectClientesPendentes(out listapessoa);
+                //ViewBag.SelectClientesPendentes = listapessoa;
+                //bool teste4 = DBComands.UpdateClientesPendentes(49, 0);
 
             }
 
@@ -46,6 +46,107 @@ namespace ProjetoVCardMVC.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        //ADM TELAS ==================================================================
+        public IActionResult Adm()
+        {
+            return View();
+        }
+        public IActionResult AdmCad()
+        {
+            return View();
+        }
+
+        //VISITANTE TELAS ==================================================================
+        public IActionResult Visit()
+        {
+            return View();
+        }
+        //TELAS RELACIONADAS A OPÇÃO DE CADASTRO==================================================
+        public IActionResult OpCad()
+        {
+            return View();
+        }
+        public IActionResult CadPj()
+        {
+            return View();
+        }
+        public IActionResult CadPf()
+        {
+            return View();
+        }
+        public IActionResult CadProf(string name, string email, string cpf, string datanascimento, string telefone, string cep, string cidade, string endereco, string bairro)
+        {
+            ViewBag.name = name;
+            ViewBag.email = email;
+            ViewBag.cpf = cpf;
+            ViewBag.datanascimento = datanascimento;
+            ViewBag.telefone = telefone;
+            ViewBag.cep = cep;
+            ViewBag.cidade = cidade;
+            ViewBag.endereco = endereco;
+            ViewBag.bairro = bairro;
+            return View();
+        }
+        public IActionResult PreviewVCard(string tempoExp, string ramo)
+        {
+            return View();
+        }
+        //TELAS RELACIONADAS A OPÇÃO DE SELECIONAR SERVIÇO==================================================
+        public IActionResult ChooseWork()
+        {
+            return View();
+        }
+        //TELAS RELACIONADAS AS PROFISSÕES==================================================
+        public IActionResult Eletro()
+        {
+            return View();
+        }
+        public IActionResult Pintor()
+        {
+            return View();
+        }
+        public IActionResult Carp()
+        {
+            return View();
+        }
+        public IActionResult Encana()
+        {
+            return View();
+        }
+        public IActionResult Arq()
+        {
+            return View();
+        }
+        public IActionResult Pedreiro()
+        {
+            return View();
+        }
+        //TELAS RELACIONADAS AS PROFISSÕES SECUNDÁRIAS==================================================
+        public IActionResult Barb()
+        {
+            return View();
+        }
+        public IActionResult Rest()
+        {
+            return View();
+        }
+        public IActionResult Mec()
+        {
+            return View();
+        }
+        public IActionResult Park()
+        {
+            return View();
+        }
+        public IActionResult Tatto()
+        {
+            return View();
+        }
+        public IActionResult Flor()
         {
             return View();
         }

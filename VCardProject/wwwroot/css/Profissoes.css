@@ -1,0 +1,224 @@
+﻿.form {
+    width: 100%;
+}
+
+.titulo-form {
+    transition: all .3s ease;
+    display: block;
+    font-family: sans-serif;
+    font-size: 50px;
+    line-height: 1.2;
+    text-align: center;
+    text-underline-position: below;
+    color: black;
+    text-shadow: 3px 3px 0px background;
+}
+
+    .titulo-form:hover {
+        transition: all .3s ease-in;
+        text-shadow: 3px 3px 0px black;
+        color: Background;
+    }
+
+.btn {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 576px) {
+    .corpo-form {
+        padding: 72px 15px 65px 15px;
+    }
+}
+
+
+
+
+body, html {
+    font-family: sans-serif;
+    min-height: 0vh;
+    min-width: 0vw;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient(85deg, #6a00b45,#1377D4, #21EBA7);
+    background: -o-linear-gradient(85deg, #6a00b4,#1377D4, #21EBA7);
+    background: -moz-linear-gradient(85deg, #6a00b4,#1377D4, #21EBA7);
+    background: linear-gradient(85deg,#6a00b4,#1377D4, #21EBA7);
+}
+
+.corpo {
+    width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: rgba(0, 0, 170, 0.00);
+}
+
+.corpo-form {
+    width: 1000px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 42px 30px 45px 30px;
+}
+
+/*BOTÕES=============================================================→*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+/*BOTÕES PRIMARIOS===============================================================*/
+
+:root {
+    --backgroundColor: #ff0000;
+    --colorShadeA: #6a00b4;
+    --colorShadeB: black;
+    --colorShadeC: #1377D4;
+    --colorShadeD: #21EBA7;
+    --colorShadeE: white;
+}
+
+
+* {
+    box-sizing: unset;
+}
+
+    *::before, *::after {
+        box-sizing: unset;
+    }
+
+button.btnTeste {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 1.9rem;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+
+
+button.btnTeste {
+    padding: 1em 2em;
+    border: 2px solid var(--colorShadeA);
+    border-radius: 1em;
+    background: var(--colorShadeE);
+    transform-style: preserve-3d;
+    transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+    button.btnTeste::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: -10px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--colorShadeC);
+        border-radius: inherit;
+        box-shadow: 0 0 0 2px transparent, 0 0.4em 10px 0 var(--colorShadeA);
+        transform: translate3d(0, .75em, -1em);
+        transition: all 175ms cubic-bezier(0, 0, 1, 1);
+    }
+
+
+    button.btnTeste:hover {
+        background: var(--colorShadeD);
+        transform: translate(0, .375em);
+    }
+
+        button.btnTeste:hover::before {
+            transform: translate3d(0, .5em, -1em);
+        }
+
+    button.btnTeste:active {
+        transform: translate(0, .75em);
+    }
+
+        button.btnTeste:active::before {
+            transform: translate3d(0,8px,-0.7em);
+            background-color: transparent;
+        }
+
+/*BOTÕES SECUNDÁRIOS===============================================================*/
+
+button.btnSub {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+
+button.btnSub {
+    padding: 0.8em 1.8em;
+    border: 2px solid #21EBA7;
+    border-radius: .8em;
+    background: var(--colorShadeE);
+    transform-style: preserve-3d;
+    transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+    button.btnSub::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: -10px;
+        left: -5px;
+        right: 0;
+        bottom: 0;
+        background: var(--colorShadeD);
+        border-radius: inherit;
+        box-shadow: 0 0 0 2px transparent, -5px 0.4em 10px 0 var(--colorShadeC);
+        transform: translate3d(0, .75em, -1em);
+        transition: all 175ms cubic-bezier(0, 0, 1, 1);
+    }
+
+
+    button.btnSub:hover {
+        background: var(--colorShadeC);
+        transform: translate(0, .375em);
+    }
+
+        button.btnSub:hover::before {
+            transform: translate3d(0, .5em, -.1em);
+        }
+
+    button.btnSub:active {
+        transform: translate(0, .75em);
+    }
+
+        button.btnSub:active::before {
+            transform: translate3d(5px,8px,-0.5em);
+            /*background-color: transparent;*/
+        }

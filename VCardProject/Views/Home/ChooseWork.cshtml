@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title></title>
+    <link href="~/css/Profissoes.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="corpo">
+        <div class="corpo-form">
+            <form method="post" class="form">
+                <div class="titulo-form">
+                    <strong>Serviços em Destaque</strong>
+                </div><br>
+
+                <div class="btn" id="btn">
+                    <button class="btnTeste" formaction="/Home/Eletro">Eletrecista</button>
+                    <button class="btnTeste" formaction="/Home/Pintor">Pintor</button>
+                    <button class="btnTeste" formaction="/Home/Carp">Carpinteiro</button> <br><br /><br />
+
+                    <button class="btnTeste" formaction="/Home/Encana">Encanador</button>
+                    <button class="btnTeste" formaction="/Home/Arq">Arquiteto</button>
+                    <button class="btnTeste" formaction="/Home/Pedreiro">Pedreiro</button>
+                </div><br><br><br>
+
+
+            </form>
+            <form action="/" method="post">
+
+                <div class="btnSec">
+                    <button class="btnSub" id="btnSub1" name="btnSub" formaction="/Home/Barb">Barbearia</button>
+                    <button class="btnSub" id="btnSub2" name="btnSub" formaction="/Home/Rest">Restaurante</button>
+                    <button class="btnSub" id="btnSub3" name="btnSub" formaction="/Home/Mec">Mecânica</button>
+
+
+                    <button class="btnSub" id="btnSub4" name="btnSub" formaction="/Home/Park">Parque Aquático</button>
+                    <button class="btnSub" id="btnSub5" name="btnSub" formaction="/Home/Tatto">Tatuador</button>
+                    <button class="btnSub" id="btnSub6" name="btnSub" formaction="/Home/Flor">Floricultura</button><br>
+
+                    <button class="btnSub" onclick="mostrar();">←</button>
+                    @*<button class="btnSub" onclick="esconder();">→</button>*@
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

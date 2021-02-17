@@ -693,7 +693,8 @@ namespace ProjetoVCardMVC.Models
 
             try
             {
-                string select = $"Select a.*, b.* FROM dbo.pessoa a, dbo.endereco b WHERE  a.RamoAtiv1 = '{ramoativ}' ORDER BY nome DESC";
+                //string select = $"Select a.*, b.* FROM dbo.pessoa a, dbo.endereco b WHERE  a.RamoAtiv1 = '{ramoativ}' ORDER BY nome DESC";
+                string select = $"Select * FROM dbo.pessoa WHERE  a.RamoAtiv1 = '{ramoativ}' ORDER BY nome DESC";
                 cmd = new SqlCommand(select, conn);
                 conn.Open();
                 dr = cmd.ExecuteReader();
@@ -704,16 +705,30 @@ namespace ProjetoVCardMVC.Models
                     pessoa.Fone = Convert.ToString(dr["Fone"]);
                     pessoa.TempoExperiencia = Convert.ToInt32(dr["TempoExperiencia"]);
                     pessoa.RamoAtividade1 = Convert.ToString(dr["RamoAtiv1"]);
-                    pessoa.Bairro = Convert.ToString(dr["Bairro"]);
-                    int idPessoa = Convert.ToInt32(dr["idtable1"]);
+                    pessoa.Id = Convert.ToInt32(dr["idtable1"]);
+                    //pessoa.Bairro = Convert.ToString(dr["Bairro"]);
 
                     listapessoa.Add(pessoa);
                 }
                 dr.Close();
                 conn.Close();
-
+                
                 temp = true;
 
+
+                //int i = 0;
+                //select = $"Select * FROM dbo.endereco WHERE RamoAtiv1 = '{ramoativ}' ORDER BY nome DESC";
+                //cmd = new SqlCommand(select, conn);
+                //conn.Open();
+                //dr = cmd.ExecuteReader();
+                //while (dr.Read())
+                //{ 
+                //    Pessoa pes = listapessoa[i];
+                //    pes.Bairro = Convert.ToString(dr["Bairro"]);
+                //    listapessoa.Insert(i, pes);
+                //    listapessoa.RemoveAt(i + 1);
+                //    i++;
+                //}
 
                 /// usar as duas funcoes abaixo para teste no BD Teste
                 /// 

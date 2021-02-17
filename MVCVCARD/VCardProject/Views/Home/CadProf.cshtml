@@ -1,0 +1,85 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="~/js/site.js" type="text/javascript" rel="stylesheet" />
+    <link href="~/css/CadProfissoes.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="centralForm">
+        <div class="shape">
+            <form class="form validate-form" action="Teste01" method="get">
+                <span class="form-title">
+                    Serviços.
+                </span>
+
+                <div class="wrap-input100 input100-select">
+                    <strong><span class="label-input100" name="teste" id="teste">Selecione sua Profissão</span></strong>
+                    <div>
+                        <select class="personalizar-select">
+                            <option disabled selected>Serviços...</option>
+                            <option>Eletrecista</option>
+                            <option>Encanador</option>
+                            <option>Pintor</option>
+                            <option>Arquiteto</option>
+                            <option>Pedreiro</option>
+                            <option>Carpinteiro</option>
+                            <option>Marceneiro</option>
+                            <option name="outros" id="outros" onclick="cxDialogo();" ondblclick="fecha();">Outros...</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="wrap-input100 input100-select">
+                    <strong><span class="label-input100">Tempo de Experiêcia</span></strong>
+                    <div>
+
+                        <select class="personalizar-select">
+                            <option disabled selected>XP.</option>
+                            <option>Menos de 1 ano</option>
+                            <option>1 ano</option>
+                            <option>2 anos</option>
+                            <option>3 anos</option>
+                            <option>4 anos</option>
+                            <option>+5 anos</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                @*caixa de mensagens*@
+                <div>
+                    @*<div class="wrap-input100 validate-input" data-validate="Message is required">
+                            <span class="label-input100">Message</span>
+                            <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+                            <span class="focus-input100"></span>
+                        </div>*@
+                </div>
+
+
+                <div>
+                    <input type="submit" value="Continue" formaction="/Home/PreviewVCard"><br>
+
+                </div>
+                <div>
+                    <input type="submit" class="btnBack" value="Voltar" formaction="/Home/Visit">
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

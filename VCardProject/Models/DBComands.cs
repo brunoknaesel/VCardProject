@@ -44,53 +44,104 @@ namespace ProjetoVCardMVC.Models
             int status = 1;
             //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
             bool temp = false;
+            bool checarCPF = true;
+            string cpfBD = "";
 
             try
             {
-                string insert = $"Insert into dbo.endereco (Cep, Cidade, Rua, Bairro) values ('{cep}','{cidade}','{rua}','{bairro}')";
-                cmd = new SqlCommand(insert, conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
-                insert = $"Insert into dbo.pessoa (Nome, Email, Fone, TempoExperiencia, RamoAtiv1, Status) values ('{nome}','{email}','{fone}','{Convert.ToInt32(tempoExp)}', '{ramo}', {status} )";
-                cmd = new SqlCommand(insert, conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
-                int idEnd = 0;
-                int idPessoa = 0;
-
-                string select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
-                cmd = new SqlCommand(select, conn);
-                conn.Open();
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    idEnd = Convert.ToInt32(dr["idend"]);
-                }
-                dr.Close();
-                conn.Close();
-
-                select = "Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
-                cmd = new SqlCommand(select, conn);
-                conn.Open();
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    idPessoa = Convert.ToInt32(dr["idtable1"]);
-                }
-                dr.Close();
-                conn.Close();
-
-                insert = $"Insert into dbo.pf (CPF, Nascimento, end_idend, pessoa_idtable1) values ('{cpf}','{dataNasc}',{idEnd}, {idPessoa} )";
-                cmd = new SqlCommand(insert, conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
                 temp = true;
+                string select = "Select * FROM dbo.pf ";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cpfBD = Convert.ToString(dr["CPF"]);
+
+                    if (cpfBD == cpf)
+                    {
+                        checarCPF = false;
+                        temp = false;
+                    }
+
+                }
+                dr.Close();
+                conn.Close();
+
+
+                if (checarCPF)
+                {
+                    try
+                    {
+                        temp = false;
+                        string insert = $"Insert into dbo.endereco (Cep, Cidade, Rua, Bairro) values ('{cep}','{cidade}','{rua}','{bairro}')";
+                        cmd = new SqlCommand(insert, conn);
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        insert = $"Insert into dbo.pessoa (Nome, Email, Fone, TempoExperiencia, RamoAtiv1, Status) values ('{nome}','{email}','{fone}','{Convert.ToInt32(tempoExp)}', '{ramo}', {status} )";
+                        cmd = new SqlCommand(insert, conn);
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        int idEnd = 0;
+                        int idPessoa = 0;
+
+                        select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
+                        cmd = new SqlCommand(select, conn);
+                        conn.Open();
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            idEnd = Convert.ToInt32(dr["idend"]);
+                        }
+                        dr.Close();
+                        conn.Close();
+
+                        select = "Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
+                        cmd = new SqlCommand(select, conn);
+                        conn.Open();
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            idPessoa = Convert.ToInt32(dr["idtable1"]);
+                        }
+                        dr.Close();
+                        conn.Close();
+
+                        insert = $"Insert into dbo.pf (CPF, Nascimento, end_idend, pessoa_idtable1) values ('{cpf}','{dataNasc}',{idEnd}, {idPessoa} )";
+                        cmd = new SqlCommand(insert, conn);
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        temp = true;
+
+                    }
+                    catch (FormatException)
+                    {
+                        temp = false;
+                    }
+                    catch (SqlException)
+                    {
+                        Console.WriteLine("BD Error... Press enter to continue     ");
+                        Console.ReadLine();
+                        Console.Clear();
+                        temp = false;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                        Console.ReadLine();
+                        Console.Clear();
+                        temp = false;
+                    }
+
+                }
+
+
             }
             catch (FormatException)
             {
@@ -605,53 +656,105 @@ namespace ProjetoVCardMVC.Models
             int status = 1;
             //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
             bool temp = false;
+            bool checarCNPJ = true; ;
+            string cnpjBD = "";
 
             try
             {
-                string insert = $"Insert into dbo.endereco (Cep, Cidade, Rua, Bairro) values ('{cep}','{cidade}','{rua}','{bairro}')";
-                cmd = new SqlCommand(insert, conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
-                insert = $"Insert into dbo.pessoa (Nome, Email, Fone, TempoExperiencia, RamoAtiv1, Status) values ('{nome}','{email}','{fone}','{Convert.ToInt32(tempoExp)}', '{ramo}', {status} )";
-                cmd = new SqlCommand(insert, conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
-                int idEnd = 0;
-                int idPessoa = 0;
-
-                string select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
-                cmd = new SqlCommand(select, conn);
-                conn.Open();
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    idEnd = Convert.ToInt32(dr["idend"]);
-                }
-                dr.Close();
-                conn.Close();
-
-                select = "Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
-                cmd = new SqlCommand(select, conn);
-                conn.Open();
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    idPessoa = Convert.ToInt32(dr["idtable1"]);
-                }
-                dr.Close();
-                conn.Close();
-
-                insert = $"Insert into dbo.pj (CNPJ, DataFund, end_idend, pessoa_idtable1) values ('{cnpj}','{dataFund}',{idEnd}, {idPessoa} )";
-                cmd = new SqlCommand(insert, conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
                 temp = true;
+                string select = "Select * FROM dbo.pj";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cnpjBD = Convert.ToString(dr["CNPJ"]);
+
+                    if (cnpjBD == cnpj)
+                    {
+                        checarCNPJ = false;
+                        temp = false;
+                    }
+                }
+                dr.Close();
+                conn.Close();
+
+                if (checarCNPJ)
+                {
+                    try
+                    {
+                        temp = false;
+                        string insert = $"Insert into dbo.endereco (Cep, Cidade, Rua, Bairro) values ('{cep}','{cidade}','{rua}','{bairro}')";
+                        cmd = new SqlCommand(insert, conn);
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        insert = $"Insert into dbo.pessoa (Nome, Email, Fone, TempoExperiencia, RamoAtiv1, Status) values ('{nome}','{email}','{fone}','{Convert.ToInt32(tempoExp)}', '{ramo}', {status} )";
+                        cmd = new SqlCommand(insert, conn);
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        int idEnd = 0;
+                        int idPessoa = 0;
+
+                        select = "Select Top(1) * FROM dbo.endereco ORDER BY idend DESC";
+                        cmd = new SqlCommand(select, conn);
+                        conn.Open();
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            idEnd = Convert.ToInt32(dr["idend"]);
+                        }
+                        dr.Close();
+                        conn.Close();
+
+                        select = "Select Top(1) * FROM dbo.pessoa ORDER BY idtable1 DESC";
+                        cmd = new SqlCommand(select, conn);
+                        conn.Open();
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            idPessoa = Convert.ToInt32(dr["idtable1"]);
+                        }
+                        dr.Close();
+                        conn.Close();
+
+                        insert = $"Insert into dbo.pj (CNPJ, DataFund, end_idend, pessoa_idtable1) values ('{cnpj}','{dataFund}',{idEnd}, {idPessoa} )";
+                        cmd = new SqlCommand(insert, conn);
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        temp = true;
+
+                    }
+                    catch (FormatException)
+                    {
+                        temp = false;
+                    }
+                    catch (SqlException)
+                    {
+                        Console.WriteLine("BD Error... Press enter to continue     ");
+                        Console.ReadLine();
+                        Console.Clear();
+                        temp = false;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("*Error Unkown...  Press enter to continue     *");
+                        Console.ReadLine();
+                        Console.Clear();
+                        temp = false;
+                    }
+
+                }
+                else
+                {
+                    temp = false;
+                }
+
             }
             catch (FormatException)
             {

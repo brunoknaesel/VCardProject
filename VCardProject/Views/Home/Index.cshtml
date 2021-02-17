@@ -5,45 +5,53 @@
     List<Pessoa> listapessoa2 = ViewBag.SelectClientesPendentes;
 }
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Ta difirci esse negocio <a href=".... eita vida..."></a>.</p>
-    </div>
 
 
-    <div class="text-center">
-        <h1 class="display-4">Lista do Profissional solicitado: </h1>
-        <ul>
-            @foreach (var item in listapessoa) // funcao para testar na tela
-            {
-                <li>Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... Ramo Ativ: @item.RamoAtividade1 ... Bairro: @item.Bairro.</li>
-            }
-        </ul>
-    </div>
+value="nome | Idade | 5421241 | "
+
+@{
+    string a = "nome";
+    <input type="button" name="name" value="a" />
 
 
 
-
-    <div class="text-center">
-        <h1 class="display-4">Lista ultimo cadastrado</h1>
-        <ul>
-            @foreach (var item in listapessoa1) // funcao para testar na tela
-            {
-                <li>Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... @item.RamoAtividade1</li>
-            }
-        </ul>
-    </div>
+}
 
 
+<div>
+    @*<div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+            <p>Ta difirci esse negocio <a href=".... eita vida..."></a>.</p>
+        </div>
 
+        <div class="text-center">
+            <h1 class="display-4">Lista do Profissional solicitado: </h1>
+            <ul>
+                @foreach (var item in listapessoa) // funcao para testar na tela
+                {
+                    <li>Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... Ramo Ativ: @item.RamoAtividade1 ... Bairro: @item.Bairro.</li>
+                }
+            </ul>
+        </div>
 
+        <div class="text-center">
+            <h1 class="display-4">Lista ultimo cadastrado</h1>
+            <ul>
+                @foreach (var item in listapessoa1) // funcao para testar na tela
+                {
+                    <li>Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... @item.RamoAtividade1</li>
+                }
+            </ul>
+        </div>
 
-    <div class="text-center">
-        <h1 class="display-4">Lista de todos os cadastrados pendentes</h1>
-        <ul>
-            @foreach (var item in listapessoa2) // funcao para testar na tela
-            {
-                <li>Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... Ramo ativ: @item.RamoAtividade1 ... Status: @item.Status</li>
-            }
-        </ul>
-    </div>
+        <div class="text-center">
+            <h1 class="display-4">Lista de todos os cadastrados pendentes</h1>
+            <ul>
+                @foreach (var item in listapessoa2) // funcao para testar na tela
+                {
+                    <li>Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... Ramo ativ: @item.RamoAtividade1 ... Status: @item.Status</li>
+                }
+            </ul>
+        </div>*@
+
+</div>

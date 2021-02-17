@@ -110,7 +110,7 @@ namespace ProjetoVCardMVC.Models
                 Console.Clear();
                 temp = false;
             }
-          
+
 
             return temp;
         }
@@ -712,7 +712,7 @@ namespace ProjetoVCardMVC.Models
                 }
                 dr.Close();
                 conn.Close();
-                
+
                 temp = true;
 
 
@@ -767,7 +767,7 @@ namespace ProjetoVCardMVC.Models
                 temp = false;
             }
 
-       
+
 
             return temp;
         }
@@ -823,7 +823,7 @@ namespace ProjetoVCardMVC.Models
                         }
                         dr.Close();
                         conn.Close();
-                        
+
                         temp = true;
                     }
                     catch (FormatException)
@@ -919,7 +919,7 @@ namespace ProjetoVCardMVC.Models
                 temp = false;
             }
 
-          
+
 
             return temp;
         }
@@ -1228,7 +1228,7 @@ namespace ProjetoVCardMVC.Models
                         Console.Clear();
                         temp = false;
                     }
-                   
+
                 }
 
             }
@@ -1347,18 +1347,163 @@ namespace ProjetoVCardMVC.Models
         {
             int status = 1;
             //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
-            string teste = "pf444444";
-            string nome = teste;
-            string cpf = teste;
-            string email = teste;
-            string dataNasc = teste;
-            string fone = teste;
-            string cep = teste;
-            string cidade = teste;
-            string rua = teste;
-            string bairro = teste;
-            string tempoExp = "9";
-            string ramo = "Pintor";
+            //string teste = "pf444444";
+
+            //string nome = "Manuel Juan Diego da Rosa";
+            //string cpf = "390.147.339-41";
+            //string email = "mmanueljuandiegodarosa@outlook.com";
+            //string dataNasc = "23/08/1995";
+            //string fone = "(47) 98692-2779";
+            //string cep = "89110-976";
+            //string cidade = "Gaspar";
+            //string rua = "Anfilóquio Nunes Pires";
+            //string bairro = "Bela Vista";
+            //string tempoExp = "2";
+            //string ramo = "Pedreiro";
+
+            //string nome = "Thiago Yago Noah Alves";
+            //string cpf = "582.208.609-87";
+            //string email = "thiagoyagonoahalves@gmail.com";
+            //string dataNasc = "16/08/2001";
+            //string fone = "(48) 98873-5922";
+            //string cep = "88906-096";
+            //string cidade = "Araranguá";
+            //string rua = "Rua São Luiz";
+            //string bairro = "Jardim das Avenidas";
+            //string tempoExp = "1";
+            //string ramo = "Pedreiro";
+
+            //string nome = "Edson Geraldo Nicolas Moraes";
+            //string cpf = "373.057.029-35";
+            //string email = "edsongeraldonicolas@hotmail.com";
+            //string dataNasc = "04/05/1994";
+            //string fone = "(47) 98785-7220";
+            //string cep = "88307-580";
+            //string cidade = "Itajaí";
+            //string rua = "Rua Vereador José Carlos Mendonça";
+            //string bairro = "Carvalho";
+            //string tempoExp = "3";
+            //string ramo = "Eletricista";
+
+            //string nome = "Leandro Roberto Benício Moraes";
+            //string cpf = "887.927.919-05";
+            //string email = "lleandrorobertobeniciomoraes@gmail.com";
+            //string dataNasc = "11/01/1986";
+            //string fone = "(47) 99622-0596";
+            //string cep = "89015-480";
+            //string cidade = "Blumenau";
+            //string rua = "Rua Cássio Medeiros";
+            //string bairro = "Vorstadt";
+            //string tempoExp = "8";
+            //string ramo = "Pintor";
+
+            //string nome = "Bryan Gael Silva";
+            //string cpf = "230.302.359-10";
+            //string email = "bryangaelsilva-74@fixacomunicacao.com.br";
+            //string dataNasc = "04/12/1981";
+            //string fone = "(48) 99943-0777";
+            //string cep = "88701-070";
+            //string cidade = "Tubarão";
+            //string rua = "Rua Travessa Antônio Magalhães de Castro";
+            //string bairro = "Centro";
+            //string tempoExp = "6";
+            //string ramo = "Encanador";
+
+            //string nome = "Antonio Gabriel Benjamin";
+            //string cpf = "215.796.259-08";
+            //string email = "antoniogabrielbenjamin@gmail.com.br";
+            //string dataNasc = "12/07/1992";
+            //string fone = "(47) 99217-3489";
+            //string cep = "89164-900";
+            //string cidade = "Rio do Sul";
+            //string rua = "Rua Benjamin Constant";
+            //string bairro = "Centro";
+            //string tempoExp = "4";
+            //string ramo = "Marceneiro";
+
+            //string nome = "Débora Daiane Fernandes";
+            //string cpf = "698.465.079-84";
+            //string email = "deboradaianefernandes_@vick1.com.br";
+            //string dataNasc = "09/04/1990";
+            //string fone = "(47) 99598-4849";
+            //string cep = "89285-165";
+            //string cidade = "São Bento do Sul";
+            //string rua = "Rua Maria Knuppel Weiss";
+            //string bairro = "Mato Preto";
+            //string tempoExp = "7";
+            //string ramo = "Arquiteto";
+
+            //string nome = "Fábio Tomás Thales Pinto";
+            //string cpf = "552.774.079-36";
+            //string email = "fabiotomasthalespinto-80@gdsambiental.com.br";
+            //string dataNasc = "25/07/1984";
+            //string fone = "(48) 99376-0721";
+            //string cep = "88806-430";
+            //string cidade = "Criciúma";
+            //string rua = "Rua Roberto Cândido";
+            //string bairro = "Mineira Nova";
+            //string tempoExp = "7";
+            //string ramo = "Carpinteiro";
+
+            //string nome = "Maya Nair Fabiana da Mota";
+            //string cpf = "347.284.009-99";
+            //string email = "marmitasdamaya@gmail.com.br";
+            //string dataNasc = "23/06/1970";
+            //string fone = "(47) 98414-3199";
+            //string cep = "88351-605";
+            //string cidade = "Brusque";
+            //string rua = "Rua SP - 071";
+            //string bairro = "São Pedro";
+            //string tempoExp = "14";
+            //string ramo = "Restaurante";
+
+            //string nome = "Renato Cauã Hugo Araújo";
+            //string cpf = "114.093.469-43";
+            //string email = "renatocauahugoaraujo-95@gmail.com";
+            //string dataNasc = "03/10/1979";
+            //string fone = "(47) 99580-3570";
+            //string cep = "89160-091";
+            //string cidade = "Rio do Sul";
+            //string rua = "Rua Maria Camila Machado";
+            //string bairro = "Centro";
+            //string tempoExp = "8";
+            //string ramo = "Barbearia";
+
+            //string nome = "Thiago Thomas Oliver Melo";
+            //string cpf = "906.198.809-88";
+            //string email = "mecanicasulcar@hotmail.com";
+            //string dataNasc = "11/08/1985";
+            //string fone = "(48) 98179-6253";
+            //string cep = "88817-107";
+            //string cidade = "Criciúma";
+            //string rua = "Rua Floresta";
+            //string bairro = "Vila Floresta";
+            //string tempoExp = "7";
+            //string ramo = "Mecanica";
+
+            //string nome = "Rayssa Marlene Nascimento";
+            //string cpf = "146.373.129-90";
+            //string email = "rayssatattosc@hotmail.com";
+            //string dataNasc = "08/03/1982";
+            //string fone = "(47) 99712-8319";
+            //string cep = "89209-037";
+            //string cidade = "Joinville";
+            //string rua = "Rua Douglas Willian Martins";
+            //string bairro = "João Costa";
+            //string tempoExp = "10";
+            //string ramo = "Tatuador";
+
+            string nome = "Isis Milena Jesus";
+            string cpf = "904.595.139-82";
+            string email = "isisflowers@outlook.com";
+            string dataNasc = "01/10/1975";
+            string fone = "(47) 99465-1243";
+            string cep = "88345-572";
+            string cidade = "Camboriú";
+            string rua = "Rua Jesuíno Anastácio Pereira";
+            string bairro = "Santa Regina";
+            string tempoExp = "19";
+            string ramo = "Floricultura";
 
             bool temp = false;
 
@@ -1429,7 +1574,7 @@ namespace ProjetoVCardMVC.Models
             }
         }
 
-        public static void  InsertPJManualmente()
+        public static void InsertPJManualmente()
         {
             int status = 1;
             //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo

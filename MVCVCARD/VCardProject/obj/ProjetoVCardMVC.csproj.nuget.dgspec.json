@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\entra21\\Downloads\\VCardProject\\ProjetoVCardMVC.csproj": {}
+    "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\MVCVCARD\\VCardProject\\ProjetoVCardMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\entra21\\Downloads\\VCardProject\\ProjetoVCardMVC.csproj": {
+    "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\MVCVCARD\\VCardProject\\ProjetoVCardMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\entra21\\Downloads\\VCardProject\\ProjetoVCardMVC.csproj",
+        "projectUniqueName": "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\MVCVCARD\\VCardProject\\ProjetoVCardMVC.csproj",
         "projectName": "ProjetoVCardMVC",
-        "projectPath": "C:\\Users\\entra21\\Downloads\\VCardProject\\ProjetoVCardMVC.csproj",
+        "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\MVCVCARD\\VCardProject\\ProjetoVCardMVC.csproj",
         "packagesPath": "C:\\Users\\entra21\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\entra21\\Downloads\\VCardProject\\obj\\",
+        "outputPath": "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\MVCVCARD\\VCardProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\entra21\\AppData\\Roaming\\NuGet\\NuGet.Config",

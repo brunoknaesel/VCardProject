@@ -1433,18 +1433,155 @@ namespace ProjetoVCardMVC.Models
         {
             int status = 1;
             //status = 0 - Inativo             //status = 1 - Pendente             //status = 2 - Ativo
-            string teste = "pj555555";
-            string nome = teste;
-            string cnpj = teste;
-            string email = teste;
-            string dataFund = teste;
-            string fone = teste;
-            string cep = teste;
-            string cidade = teste;
-            string rua = teste;
-            string bairro = teste;
-            string tempoExp = "8";
-            string ramo = "Pintor";
+            //string teste = "pj555555";
+            //string nome = "Oliveira Empreiteira Mão de Obra";
+            //string cnpj = "00.650.830/0001-21";
+            //string email = "oliveiraemp@gmail.com";
+            //string dataFund = "01/02/1995";
+            //string fone = "(47) 99225-1313";
+            //string cep = "89046-000";
+            //string cidade = "Blumenau";
+            //string rua = "Rua XV de Novembro";
+            //string bairro = "Centro";
+            //string tempoExp = "8";
+            //string ramo = "Pedreiro";
+
+            //string nome = "RT Empreiteira Ltda";
+            //string cnpj = "00.620.986/0001-35";
+            //string email = "rt@gmail.com";
+            //string dataFund = "05/08/1999";
+            //string fone = "(48) 99112-1458";
+            //string cep = "89040-001";
+            //string cidade = "Blumenau";
+            //string rua = "Rua dos Caçadores";
+            //string bairro = "Velha";
+            //string tempoExp = "12";
+            //string ramo = "Pedreiro";
+
+            //string nome = "Pintores Blumenau Ltda";
+            //string cnpj = "00.520.741/0001-32";
+            //string email = "pintores@gmail.com";
+            //string dataFund = "05/01/2018";
+            //string fone = "(47) 99114-5252";
+            //string cep = "89045-003";
+            //string cidade = "Blumenau";
+            //string rua = "Rua Divinopolis";
+            //string bairro = "Velha";
+            //string tempoExp = "3";
+            //string ramo = "Pintor";
+
+
+            //string nome = "Seibt Servicos Hidraulicos";
+            //string cnpj = "00.320.358/0001-22";
+            //string email = "seibt@gmail.com";
+            //string dataFund = "05/06/1990";
+            //string fone = "(47) 99222-4578";
+            //string cep = "89045-000";
+            //string cidade = "Blumenau";
+            //string rua = "Rua Jose Reuter";
+            //string bairro = "Velha";
+            //string tempoExp = "25";
+            //string ramo = "Encanador";
+
+
+            //string nome = "Arte e Design Ltda";
+            //string cnpj = "00.421.523/0005-20";
+            //string email = "artedesign@gmail.com";
+            //string dataFund = "26/01/2012";
+            //string fone = "(47) 92244-0445";
+            //string cep = "89046-080";
+            //string cidade = "Blumenau";
+            //string rua = "Rua das Larajeiras";
+            //string bairro = "Salto do Norte";
+            //string tempoExp = "9";
+            //string ramo = "Arquiteto";
+
+
+            //string nome = "Mazzi Carpintaria em Geral Ltda";
+            //string cnpj = "00.141.785/0002-20";
+            //string email = "mazzi@gmail.com";
+            //string dataFund = "08/04/2009";
+            //string fone = "(47) 99254-2525";
+            //string cep = "89045-003";
+            //string cidade = "Blumenau";
+            //string rua = "Rua da Comunidade";
+            //string bairro = "Vila Itoupava";
+            //string tempoExp = "12";
+            //string ramo = "Carpinteiro";
+
+            //string nome = "Restaurante e Lanchonete Garcia";
+            //string cnpj = "00.525.624/0001-23";
+            //string email = "restaurante@gmail.com";
+            //string dataFund = "06/09/2015";
+            //string fone = "(47) 99224-2545";
+            //string cep = "89080-220";
+            //string cidade = "Blumenau";
+            //string rua = "Rua 4 de Janeiro";
+            //string bairro = "Garcia";
+            //string tempoExp = "6";
+            //string ramo = "Restaurante";
+
+
+            //string nome = "Rock Barbearia Ltda";
+            //string cnpj = "00.520.102/0001-20";
+            //string email = "restaurante@gmail.com";
+            //string dataFund = "06/09/2015";
+            //string fone = "(47) 99224-2545";
+            //string cep = "89080-220";
+            //string cidade = "Blumenau";
+            //string rua = "Rua 4 de Janeiro";
+            //string bairro = "Garcia";
+            //string tempoExp = "6";
+            //string ramo = "Barbearia";
+
+            //string nome = "Recanto Cascaneia";
+            //string cnpj = "00.204.552/0001-22";
+            //string email = "cascaneia@gmail.com";
+            //string dataFund = "12/12/1997";
+            //string fone = "(47) 96454-1212";
+            //string cep = "89045-000";
+            //string cidade = "Gaspar";
+            //string rua = "Rua Belchior";
+            //string bairro = "Belchior";
+            //string tempoExp = "20";
+            //string ramo = "Parque Aquatico";
+
+            //string nome = "Cascata Carolina";
+            //string cnpj = "00.325.412/0001-22";
+            //string email = "cascata@gmail.com";
+            //string dataFund = "08/01/2002";
+            //string fone = "(47) 99156-9191";
+            //string cep = "89000-000";
+            //string cidade = "Gaspar";
+            //string rua = "Rua Belchior";
+            //string bairro = "Belchior";
+            //string tempoExp = "15";
+            //string ramo = "Parque Aquatico";
+
+            //string nome = "Tinta na Pele Tatoo";
+            //string cnpj = "00.222.101/0002-20";
+            //string email = "tintanapele@gmail.com";
+            //string dataFund = "05/02/1997";
+            //string fone = "(47) 99119-1010";
+            //string cep = "89032-002";
+            //string cidade = "Blumenau";
+            //string rua = "Rua Sao Paulo";
+            //string bairro = "Itoupava Seca";
+            //string tempoExp = "24";
+            //string ramo = "Tatuador";
+
+            //string nome = "Floricultura e Presentes Sonia";
+            //string cnpj = "08.457.852/0003-52";
+            //string email = "floricultura@gmail.com";
+            //string dataFund = "06/01/2007";
+            //string fone = "(47) 99121-0130";
+            //string cep = "89020-525";
+            //string cidade = "Blumenau";
+            //string rua = "Rua XV de Novembro";
+            //string bairro = "Centro";
+            //string tempoExp = "12";
+            //string ramo = "Floricultura";
+
 
             bool temp = false;
 

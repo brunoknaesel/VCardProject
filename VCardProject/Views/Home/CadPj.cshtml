@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Cadastro";
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title></title>
+    <link href="~/css/CadPj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form action="/" method="post" class="contact100-form validate-form">
+                <span class="contact100-form-title">
+                    Cadastro.
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate="Obrigatório">
+                    <strong><span class="label-input100">Nome</span></strong>
+                    <input class="input100" type="text" name="name" placeholder="Digite o seu nome..." required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Validação é Obrigatório: ex@abc.xyz">
+                    <strong><span class="label-input100">Email</span></strong>
+                    <input class="input100" type="email" name="email" placeholder="Digite o seu email..." required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Obrigatório">
+                    <strong><span class="label-input100">CNPJ</span></strong>
+                    <input class="input100" type="text" name="cnpj" placeholder="Digite o seu CNPJ..." maxlength="18" OnKeyPress="formatar('##.###.###/####-##', this)" required>
+                    <span class="focus-input100"></span>
+                </div>
+
+
+                <div class="wrap-input100 validate-input" data-validate="Obrigatório">
+                    <strong><span class="label-input100">Data de Nascimento</span></strong>
+                    <input class="input100" type="date" name="datanascimento" placeholder="Digite a sua Data de Nascimento..." required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Obrigatório">
+                    <strong> <span class="label-input100">Número de Telefone</span></strong>
+                    <td height="24"></td>
+                    <input class="input100" type="text" name="telefone" placeholder="Digite seu Telefone..." maxlength="13" OnKeyPress="formatar('##-#####-####', this)" required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Obrigatório">
+                    <strong> <span class="label-input100">CEP</span></strong>
+                    <td height="24"></td>
+                    <input class="input100" type="text" name="cep" placeholder="Digite o seu CEP..." maxlength="9" OnKeyPress="formatar('#####-###', this)" required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Obrigatório">
+                    <strong><span class="label-input100">Cidade</span></strong>
+                    <input class="input100" type="text" name="cidade" placeholder="Cidade..." required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Obrigatório">
+                    <strong><span class="label-input100">Endereço</span></strong>
+                    <input class="input100" type="text" name="endereco" placeholder="Rua..." required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Obrigatório">
+                    <strong> <span class="label-input100">Bairro</span></strong>
+                    <input class="input100" type="text" name="bairro" placeholder="Bairro..." required>
+                    <span class="focus-input100"></span>
+                </div>
+                    <input type="submit" value="Continue" formaction="/Home/CadProf"><br>
+                    <input type="submit" class="volta" value="Voltar" formaction="/Home/Visit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

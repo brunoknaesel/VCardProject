@@ -1,0 +1,82 @@
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\appsettings.json
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.exe
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.deps.json
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.runtimeconfig.json
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.runtimeconfig.dev.json
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.dll
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\ref\TelaComeco.dll
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.pdb
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.Views.dll
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.Views.pdb
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.csprojAssemblyReference.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.AssemblyInfoInputs.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.AssemblyInfo.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.csproj.CoreCompileInputs.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorAssemblyInfo.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorAssemblyInfo.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\staticwebassets\TelaComeco.StaticWebAssets.Manifest.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\staticwebassets\TelaComeco.StaticWebAssets.xml
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\scopedcss\bundle\TelaComeco.styles.css
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.TagHelpers.input.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.TagHelpers.output.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorCoreGenerate.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorTargetAssemblyInfo.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorTargetAssemblyInfo.cs
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.Views.pdb
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.dll
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\ref\TelaComeco.dll
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.pdb
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.genruntimeconfig.cache
+C:\Users\entra21\Desktop\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.csproj.CopyComplete
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.csprojAssemblyReference.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.AssemblyInfoInputs.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.AssemblyInfo.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.csproj.CoreCompileInputs.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorAssemblyInfo.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorAssemblyInfo.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\staticwebassets\TelaComeco.StaticWebAssets.Manifest.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\staticwebassets\TelaComeco.StaticWebAssets.xml
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\scopedcss\bundle\TelaComeco.styles.css
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.TagHelpers.input.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.TagHelpers.output.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorCoreGenerate.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Home\Bora.cshtml.g.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorTargetAssemblyInfo.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.RazorTargetAssemblyInfo.cs
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.dll
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\ref\TelaComeco.dll
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.pdb
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\appsettings.json
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.exe
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.deps.json
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.runtimeconfig.json
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.runtimeconfig.dev.json
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.dll
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\ref\TelaComeco.dll
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.pdb
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.Views.dll
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\bin\Debug\net5.0\TelaComeco.Views.pdb
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.Views.pdb
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.genruntimeconfig.cache
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\TelaComeco.csproj.CopyComplete
+C:\Users\Tati e Luan\Documents\GitHub\VCardProject\TelaComeco\obj\Debug\net5.0\Razor\Views\Home\Ala.cshtml.g.cs

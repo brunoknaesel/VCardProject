@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Início.";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="~/css/TelaInicialVisit.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+        <main class="container">
+            <form action="" method="post">
+                <div class="text-center">
+                    <h1>Seja Bem Vindo.</h1>
+                    <h4>Por favor escolha entre:</h4>
+                </div>
+                <fieldset>
+                    <input type="submit" value="Cadastrar seu Serviço." formaction="/Home/OpCad">
+                    <input type="submit" value="Encontrar um Serviço." formaction="/Home/ChooseWork">
+                </fieldset>
+
+
+
+            </form>
+        </main>
+</body>
+</html>

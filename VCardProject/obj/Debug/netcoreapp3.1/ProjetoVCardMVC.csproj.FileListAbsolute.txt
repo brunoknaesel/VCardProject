@@ -341,3 +341,10 @@ C:\Users\Tati e Luan\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcor
 C:\Users\Tati e Luan\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\CadPf.cshtml.g.cs
 C:\Users\Tati e Luan\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\CadProf.cshtml.g.cs
 C:\Users\Tati e Luan\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\ChooseWork.cshtml.g.cs
+C:\Users\entra21\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\Adm.cshtml.g.cs
+C:\Users\entra21\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\CadPf.cshtml.g.cs
+C:\Users\entra21\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\CadPj.cshtml.g.cs
+C:\Users\entra21\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\CadProf.cshtml.g.cs
+C:\Users\entra21\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\ChooseWork.cshtml.g.cs
+C:\Users\entra21\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\OpCad.cshtml.g.cs
+C:\Users\entra21\Documents\GitHub\VCardProject\VCardProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\Visit.cshtml.g.cs

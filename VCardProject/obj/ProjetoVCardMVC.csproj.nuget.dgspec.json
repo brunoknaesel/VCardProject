@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tati e Luan\\Documents\\GitHub\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj": {}
+    "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tati e Luan\\Documents\\GitHub\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj": {
+    "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tati e Luan\\Documents\\GitHub\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj",
+        "projectUniqueName": "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj",
         "projectName": "ProjetoVCardMVC",
-        "projectPath": "C:\\Users\\Tati e Luan\\Documents\\GitHub\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj",
-        "packagesPath": "C:\\Users\\Tati e Luan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tati e Luan\\Documents\\GitHub\\VCardProject\\VCardProject\\obj\\",
+        "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj",
+        "packagesPath": "C:\\Users\\entra21\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\entra21\\Documents\\GitHub\\VCardProject\\VCardProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tati e Luan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\entra21\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

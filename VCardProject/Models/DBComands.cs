@@ -1715,17 +1715,17 @@ namespace ProjetoVCardMVC.Models
             //string tempoExp = "24";
             //string ramo = "Tatuador";
 
-            //string nome = "Floricultura e Presentes Sonia";
-            //string cnpj = "08.457.852/0003-52";
-            //string email = "floricultura@gmail.com";
-            //string dataFund = "06/01/2007";
-            //string fone = "(47) 99121-0130";
-            //string cep = "89020-525";
-            //string cidade = "Blumenau";
-            //string rua = "Rua XV de Novembro";
-            //string bairro = "Centro";
-            //string tempoExp = "12";
-            //string ramo = "Floricultura";
+            string nome = "Floricultura e Presentes Sonia";
+            string cnpj = "08.457.852/0003-52";
+            string email = "floricultura@gmail.com";
+            string dataFund = "06/01/2007";
+            string fone = "(47) 99121-0130";
+            string cep = "89020-525";
+            string cidade = "Blumenau";
+            string rua = "Rua XV de Novembro";
+            string bairro = "Centro";
+            string tempoExp = "12";
+            string ramo = "Floricultura";
 
 
             bool temp = false;

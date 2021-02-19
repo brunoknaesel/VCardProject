@@ -73,6 +73,7 @@ form .input-field:first-child {
         padding-bottom: 5px;
         color: #000000;
         transition: all .5s;
+        
     }
 
 form input[type="submit"] {

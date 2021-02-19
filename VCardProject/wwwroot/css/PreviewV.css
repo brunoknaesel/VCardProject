@@ -1,5 +1,8 @@
-﻿main.container {
-    background: white;
+﻿body{
+    background-color:black;
+}
+main.container {
+    background: linear-gradient(45deg, #5514F5,#1377D4, #21EBA7);
     width: 950px;
     max-width: 950px;
     min-height: 4vh;

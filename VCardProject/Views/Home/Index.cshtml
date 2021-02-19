@@ -26,6 +26,7 @@
             </div>
             <input type="submit" value="Administrador" formaction="/Home/Adm">
             <input type="submit" value="Visitante" formaction="/Home/Visit"> <br />
+            <input type="submit" value="testes" formaction="/Home/PreviewVCard"> <br />
 
 
 
@@ -74,10 +75,10 @@
         <div class="text-center">
             <h1 class="display-4">Lista de todos os cadastrados pendentes</h1>
             <ul>
-                @foreach (var item in listapessoa2) // funcao para testar na tela
-                {
+                
+                
                     <li>Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... Ramo ativ: @item.RamoAtividade1 ... Status: @item.Status</li>
-                }
+                
             </ul>
         </div>*@
 

@@ -30,8 +30,8 @@ form {
         background: linear-gradient(to left, #5514F5,#1377D4, #21EBA7);
         cursor: pointer;
         color: white;
-        font-size: 2.5rem;
-        font-weight: 300;
+        font-size: 2rem;
+        font-weight: 200;
         border-radius: 50%;
         transition: all 0.8s ease;
         box-shadow: 10px 5px 5px #5514f5;

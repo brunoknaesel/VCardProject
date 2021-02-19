@@ -1169,23 +1169,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tati e Luan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\USUÁRIO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tati e Luan\\Documents\\!10tudo\\TCC V_CARD\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj",
+      "projectUniqueName": "C:\\Users\\USUÁRIO\\Downloads\\VCardProject\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj",
       "projectName": "ProjetoVCardMVC",
-      "projectPath": "C:\\Users\\Tati e Luan\\Documents\\!10tudo\\TCC V_CARD\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj",
-      "packagesPath": "C:\\Users\\Tati e Luan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tati e Luan\\Documents\\!10tudo\\TCC V_CARD\\VCardProject\\VCardProject\\obj\\",
+      "projectPath": "C:\\Users\\USUÁRIO\\Downloads\\VCardProject\\VCardProject\\VCardProject\\ProjetoVCardMVC.csproj",
+      "packagesPath": "C:\\Users\\USUÁRIO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USUÁRIO\\Downloads\\VCardProject\\VCardProject\\VCardProject\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Tati e Luan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USUÁRIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1197,7 +1193,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -1209,7 +1204,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MySql.Data": {
             "target": "Package",
@@ -1238,7 +1232,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

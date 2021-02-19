@@ -9,21 +9,64 @@
 <head>
     <title></title>
     <link href="~/css/Pessoas.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Animate.css" rel="stylesheet" type="text/css"/>
+    <link href="~/css/bootstrapAnimate.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Profissoes2.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div>
-        <div class="text-center">
-            <h1 class="display-4">Lista do Profissional solicitado: </h1>
-            @foreach (var item in listapessoa) // funcao para testar na tela
-            {
-                <form action="" method="post">
+    @*<div class="text-center">*@
+    <h1 id="titulo">Lista do Profissional solicitado. </h1>
 
-                    @*<li class="lista">Nome: @item.Nome ... Fone: @item.Fone ... Tempo Exp: @item.TempoExperiencia anos... Ramo Ativ: @item.RamoAtividade1 ...</li>*@
-                    <button value="@item.Id" name="id" formaction="/Home/MostaVCard">Nome:@item.Nome | Serviço: @item.RamoAtividade1 | Tempo Exp: @item.TempoExperiencia anos</button><br>
-                </form>
-            }
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table">
+
+                    <div class="row header">
+                        <div class="cell">
+                            Nome
+                        </div>
+                        <div class="cell">
+                            Serviço
+                        </div>
+                        <div class="cell">
+                            Tempo Experiência
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        <div class="cell" data-title="Full Name">
+                             @foreach (var item in listapessoa) // funcao para testar na tela
+                             {
+                                <form action="" method="post">
+                                    <button value="@item.Id" name="id" formaction="/Home/MostaVCard">@item.Nome </button><br> <br /> <br />
+                                </form>
+                             }
+                        </div>
+                        <div class="cell" data-title="Serviço">
+                            @foreach (var item in listapessoa) // funcao para testar na tela
+                            {
+                                <form action="" method="post">
+                                    <button value="@item.Id" name="id" formaction="/Home/MostaVCard"> @item.RamoAtividade1</button> <br /> <br /> <br />   
+                                </form>
+                            }
+                        </div>
+                        <div class="cell" data-title="Job Title">
+                            @foreach (var item in listapessoa) // funcao para testar na tela
+                            {
+                                <form action="" method="post">
+                                    <button value="@item.Id" name="id" formaction="/Home/MostaVCard"> @item.TempoExperiencia anos</button> <br /> <br /> <br />
+                                </form>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    @*</div>*@
+
 
 </body>
 </html>

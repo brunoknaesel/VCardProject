@@ -31,16 +31,14 @@
         <form action="" method="get" class="formulario-form">
 
             <label class="label">Nome:</label>
-            <label class="dados">Afonso</label><br />
-            <label class="label"> Telefone/Whatsapp: </label>
-            <label class="dados">(47) 99109-0987</label> <br />
-            <label class="label"> Email: </label>
-            <label class="dados"> sabrinagmail.com</label> <br />
-            <label class="label"> Serviços:</label>
-            <label class="dados"> Pedreiro</label> <br />
-
-            <input type="submit" value="Finalizar" onclick="funcao()" formaction="/Home/Visit" /> 
-            <input type="submit" value="Voltar" formaction="/Home/OpCad"/> <br />
+        <label class="dados">@ViewBag.name</label><br />
+        <label class="label"> Telefone/Whatsapp: </label>
+        <label class="dados">@ViewBag.telefone</label> <br />
+        <label class="label"> Email: </label>
+        <label class="dados"> @ViewBag.email</label> <br />
+        <label class="label"> Serviços:</label>
+        <label class="dados"> @ViewBag.Ramo</label>
+            <input type="submit" value="Finalizar" onclick="funcao()" formaction="/Home/Visit" />
 
 
         </form>

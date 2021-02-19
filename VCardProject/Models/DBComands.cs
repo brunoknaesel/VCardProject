@@ -611,20 +611,17 @@ namespace ProjetoVCardMVC.Models
             }
             catch (FormatException)
             {
+                throw;
                 temp = false;
             }
             catch (SqlException)
             {
-                Console.WriteLine("BD Error... Press enter to continue     ");
-                Console.ReadLine();
-                Console.Clear();
+                throw;
                 temp = false;
             }
             catch (Exception)
             {
-                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
-                Console.ReadLine();
-                Console.Clear();
+                throw;
                 temp = false;
             }
 
@@ -736,16 +733,12 @@ namespace ProjetoVCardMVC.Models
                     }
                     catch (SqlException)
                     {
-                        Console.WriteLine("BD Error... Press enter to continue     ");
-                        Console.ReadLine();
-                        Console.Clear();
+                       
                         temp = false;
                     }
                     catch (Exception)
                     {
-                        Console.WriteLine("*Error Unkown...  Press enter to continue     *");
-                        Console.ReadLine();
-                        Console.Clear();
+                        
                         temp = false;
                     }
 
@@ -762,16 +755,12 @@ namespace ProjetoVCardMVC.Models
             }
             catch (SqlException)
             {
-                Console.WriteLine("BD Error... Press enter to continue     ");
-                Console.ReadLine();
-                Console.Clear();
+              
                 temp = false;
             }
             catch (Exception)
             {
-                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
-                Console.ReadLine();
-                Console.Clear();
+              
                 temp = false;
             }
 
@@ -797,7 +786,7 @@ namespace ProjetoVCardMVC.Models
             try
             {
                 //string select = $"Select a.*, b.* FROM dbo.pessoa a, dbo.endereco b WHERE  a.RamoAtiv1 = '{ramoativ}' ORDER BY nome DESC";
-                string select = $"Select * FROM dbo.pessoa WHERE  a.RamoAtiv1 = '{ramoativ}' ORDER BY nome DESC";
+                string select = $"Select * FROM dbo.pessoa WHERE RamoAtiv1 = '{ramoativ}' ORDER BY nome ASC";
                 cmd = new SqlCommand(select, conn);
                 conn.Open();
                 dr = cmd.ExecuteReader();
@@ -853,20 +842,17 @@ namespace ProjetoVCardMVC.Models
             }
             catch (FormatException)
             {
+                throw;
                 temp = false;
             }
             catch (SqlException)
             {
-                Console.WriteLine("BD Error... Press enter to continue     ");
-                Console.ReadLine();
-                Console.Clear();
+                throw;
                 temp = false;
             }
             catch (Exception)
             {
-                Console.WriteLine("*Error Unkown...  Press enter to continue     *");
-                Console.ReadLine();
-                Console.Clear();
+                throw;
                 temp = false;
             }
 
@@ -1818,12 +1804,12 @@ namespace ProjetoVCardMVC.Models
             //string tempoExp = "24";
             //string ramo = "Tatuador";
 
-            string nome = "Floricultura e Presentes Sonia";
-            string cnpj = "08.457.852/0003-52";
-            string email = "floricultura@gmail.com";
-            string dataFund = "06/01/2007";
-            string fone = "(47) 99121-0130";
-            string cep = "89020-525";
+            string nome = "Floricultura Cleusa";
+            string cnpj = "55.696.542/0002-40";
+            string email = "floriculturajoia@gmail.com";
+            string dataFund = "30/04/1970";
+            string fone = "(47) 99227-7196";
+            string cep = "56873-054";
             string cidade = "Blumenau";
             string rua = "Rua XV de Novembro";
             string bairro = "Centro";
@@ -1900,7 +1886,95 @@ namespace ProjetoVCardMVC.Models
             }
         }
 
+        public static bool PreviewVCardSelecionado(int id, out List<Pessoa> listapessoa)
+        {
+            bool temp = false;
+            listapessoa = new List<Pessoa>();
+            try
+            {
+                Pessoa pessoa = new Pessoa();
+                int idEndBD = 0;
 
+                string select = $"Select * FROM dbo.pessoa Where idtable1 = {id}";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    pessoa.Nome = Convert.ToString(dr["nome"]);
+                    pessoa.Fone = Convert.ToString(dr["Fone"]);
+                    pessoa.Email = Convert.ToString(dr["Email"]);
+                    pessoa.TempoExperiencia = Convert.ToInt32(dr["TempoExperiencia"]);
+                    pessoa.RamoAtividade1 = Convert.ToString(dr["RamoAtiv1"]);
+
+                }
+                dr.Close();
+                conn.Close();
+
+
+                select = $"Select * FROM dbo.pf Where pessoa_idtable1 = {id}";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    idEndBD = Convert.ToInt32(dr["end_idend"]);
+                }
+                dr.Close();
+                conn.Close();
+
+
+                select = $"Select * FROM dbo.pj Where pessoa_idtable1 = {id}";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    idEndBD = Convert.ToInt32(dr["end_idend"]);
+                }
+                dr.Close();
+                conn.Close();
+
+
+                select = $"Select * FROM dbo.endereco Where idend = {idEndBD}";
+                cmd = new SqlCommand(select, conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    pessoa.Bairro = Convert.ToString(dr["Bairro"]);
+                    pessoa.Logradouro = Convert.ToString(dr["Rua"]);
+                    pessoa.Cidade = Convert.ToString(dr["Cidade"]);
+                    pessoa.Cep = Convert.ToString(dr["Cep"]);
+                    pessoa.Numero = Convert.ToString(dr["NumeroRua"]);
+                    pessoa.Complemento = Convert.ToString(dr["ComplementoRua"]);
+                }
+                dr.Close();
+                conn.Close();
+
+
+                listapessoa.Add(pessoa);
+
+            }
+            catch (FormatException)
+            {
+                temp = false;
+                throw;
+            }
+            catch (SqlException)
+            {
+                temp = false;
+                throw;
+
+            }
+            catch (Exception)
+            {
+                temp = false;
+                throw;
+            }
+
+            return temp;
+        }
 
     }
 }

@@ -14,7 +14,7 @@
         function formatar(mascara, documento) {
             var i = documento.value.length;
             var saida = mascara.substring(0, 1);
-            var texto = mascara.substring(i)
+            var texto = mascara.substring(i) 
 
             if (texto.substring(0, 1) != saida) {
                 documento.value += texto.substring(0, 1);
@@ -33,13 +33,13 @@
 
                 <div class="wrap-input100 validate-input" data-validate="Obrigatório">
                     <strong><span class="label-input100">Nome</span></strong>
-                    <input class="input100" type="text" name="name" placeholder="Digite o seu nome..."  required>
+                    <input class="input100" type="text" name="name" placeholder="Digite o seu nome...">
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Validação é Obrigatório: ex@abc.xyz">
                     <strong><span class="label-input100">Email</span></strong>
-                    <input class="input100" type="email" name="email" placeholder="Digite o seu email..." required>
+                    <input class="input100" type="email" name="email" placeholder="Digite o seu email...">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -52,7 +52,7 @@
 
                 <div class="wrap-input100 validate-input" data-validate="Obrigatório">
                     <strong><span class="label-input100">Data de Nascimento</span></strong>
-                    <input class="input100" type="date" name="datanascimento" placeholder="Digite a sua Data de Nascimento..." required>
+                    <input class="input100" type="date" name="datanascimento" placeholder="Digite a sua Data de Nascimento...">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -87,8 +87,8 @@
                     <input class="input100" type="text" name="bairro" placeholder="Bairro...">
                     <span class="focus-input100"></span>
                 </div>
-                    <input type="submit" value="Continue" formaction="/Home/CadProf"><br>
-                    <input type="submit" class="volta" value="Voltar" formaction="/Home/Visit">
+                    <input type="submit" class="subs" value="Continue" formaction="/Home/CadProf"><br>
+                    <input type="submit" class="volta" value="Voltar" formaction="/Home/OpCad">
             </form>
         </div>
     </div>

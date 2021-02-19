@@ -30,19 +30,6 @@ input {
     border: none;
 }
 
-.btnBack {
-    outline: none !important;
-    border: none;
-    background: transparent;
-    transition: all .8s;
-}
-
-    .btnBack:hover {
-        transition: all .8s;
-        color: #21eba7;
-        transform: translate3d(5px, -5px,0);
-    }
-
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -111,28 +98,42 @@ input {
 /*------------------------------------------------------------------
 [ BOTÃO ]*/
 
-form input[type="submit"] {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 13px;
+.subs {
+    margin-top: 2rem;
     padding: 0.4rem;
     background: linear-gradient(to left, #5514F5,#1377D4, #21EBA7);
     cursor: pointer;
     color: white;
     font-size: 0.9rem;
     font-weight: 300;
-    border-radius: 25px;
+    border-radius: 4px;
     transition: all 0.8s ease;
 }
 
-    form input[type="submit"]:hover {
+    .subs:hover {
         transition: all 1.5s;
         letter-spacing: 5.0px;
         background: linear-gradient(to left,#21EBA7,#1377D4,#5514F5);
     }
+
+/*------------------------------------------------------------------
+[ Button Logout ]*/
+.volta {
+    background: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: purple;
+    transition: all 0.8s;
+    font-size: 1.0rem;
+}
+
+    .volta:hover {
+        transition: all 0.8s;
+        color: #21EBA7;
+        background: white;
+    }
+
 
 
 

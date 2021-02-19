@@ -33,6 +33,7 @@ namespace ProjetoVCardMVC.Controllers
                 //ViewBag.SelectCliente = listapessoa;
                 //bool teste2 = DBComands.PreviewVCard(out listapessoa);
                 //ViewBag.Preview = listapessoa;
+
                 //bool teste3 = DBComands.SelectClientesPendentes(out listapessoa);
                 //ViewBag.SelectClientesPendentes = listapessoa;
                 //bool teste4 = DBComands.UpdateClientesPendentes(49, 0);
@@ -91,8 +92,46 @@ namespace ProjetoVCardMVC.Controllers
             ViewBag.bairro = bairro;
             return View();
         }
-        public IActionResult PreviewVCard(string tempoExp, string ramo)
+
+
+
+        public IActionResult CadProfPJ(string name, string email, string cnpj, string datanascimento, string telefone, string cep, string cidade, string endereco, string bairro)
         {
+            ViewBag.name = name;
+            ViewBag.email = email;
+            ViewBag.cnpj = cnpj;
+            ViewBag.datanascimento = datanascimento;
+            ViewBag.telefone = telefone;
+            ViewBag.cep = cep;
+            ViewBag.cidade = cidade;
+            ViewBag.endereco = endereco;
+            ViewBag.bairro = bairro;
+            return View();
+        }
+        public IActionResult PreviewVCard(string nome, string email, string cpf, string datanascimento, string telefone, string cep, string cidade, string endereco, string bairro, string tempoExp, string ramo)
+        {
+            bool comand = DBComands.InsertClientePF(nome, email, cpf, datanascimento, telefone, cep, cidade, endereco, bairro, tempoExp, ramo);
+            ViewBag.name = nome;
+            ViewBag.email = email;
+            ViewBag.telefone = telefone;
+            ViewBag.ramo = ramo;
+            return View();
+        }
+        public IActionResult PreviewVCardPJ(string nome, string email, string cnpj, string datanascimento, string telefone, string cep, string cidade, string endereco, string bairro, string tempoExp, string ramo)
+        {
+            bool comand = DBComands.InsertClientePF(nome, email, cnpj, datanascimento, telefone, cep, cidade, endereco, bairro, tempoExp, ramo);
+            ViewBag.name = nome;
+            ViewBag.email = email;
+            ViewBag.telefone = telefone;
+            ViewBag.ramo = ramo;
+            return View();
+        }
+
+        public IActionResult MostaVCard(int id)
+        {
+            List<Pessoa> listapessoa = new List<Pessoa>();
+            bool comand = DBComands.PreviewVCardSelecionado(id, out listapessoa);
+            ViewBag.SelectCliente = listapessoa;
             return View();
         }
         //TELAS RELACIONADAS A OPÇÃO DE SELECIONAR SERVIÇO==================================================
@@ -100,56 +139,67 @@ namespace ProjetoVCardMVC.Controllers
         {
             return View();
         }
+
+        public IActionResult Profissoes(string inputRamo)
+        {
+            List<Pessoa> listapessoa = new List<Pessoa>();
+            bool comand = DBComands.SelectClienteView(inputRamo, out listapessoa);
+            ViewBag.SelectCliente = listapessoa;
+            return View();
+        }
+
         //TELAS RELACIONADAS AS PROFISSÕES==================================================
-        public IActionResult Eletro()
-        {
-            return View();
-        }
-        public IActionResult Pintor()
-        {
-            return View();
-        }
-        public IActionResult Carp()
-        {
-            return View();
-        }
-        public IActionResult Encana()
-        {
-            return View();
-        }
-        public IActionResult Arq()
-        {
-            return View();
-        }
-        public IActionResult Pedreiro()
-        {
-            return View();
-        }
+        //public IActionResult Eletro()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Pintor()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Carp()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Encana()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Arq()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Pedreiro()
+        //{
+        //    return View();
+        //}
         //TELAS RELACIONADAS AS PROFISSÕES SECUNDÁRIAS==================================================
-        public IActionResult Barb()
-        {
-            return View();
-        }
-        public IActionResult Rest()
-        {
-            return View();
-        }
-        public IActionResult Mec()
-        {
-            return View();
-        }
-        public IActionResult Park()
-        {
-            return View();
-        }
-        public IActionResult Tatto()
-        {
-            return View();
-        }
-        public IActionResult Flor()
-        {
-            return View();
-        }
+        //public IActionResult Barb()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Rest()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Mec()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Park()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Tatto()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Flor()
+        //{
+        //    return View();
+        //}
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
